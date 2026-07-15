@@ -1,0 +1,481 @@
+Config_Type,Name,Parameter,Value,Description,Last_Modified,Modified_By,Effective_Date,Change_Ticket
+Global,slurm.conf,ClusterName,whpc,Primary cluster name,2025-06-15,root,2025-06-15,CHG-2025-1234
+Global,slurm.conf,PriorityType,priority/multifactor,Priority calculation,2025-06-15,root,2025-06-15,CHG-2025-1234
+Global,slurm.conf,PriorityWeightFairshare,10000,FairShare factor weight,2025-06-15,root,2025-06-15,CHG-2025-1234
+Global,slurm.conf,FairShareDampeningFactor,2,Dampening factor,2025-06-15,root,2025-06-15,CHG-2025-1234
+Global,slurm.conf,PreemptExemptTime,00:05:00,Grace period before preemption,2025-06-15,root,2025-06-15,CHG-2025-1234
+Global,slurm.conf,AccountingStoragePort,6819,SlurmDBD port,2025-06-15,root,2025-06-15,CHG-2025-1234
+Global,slurm.conf,SlurmdTimeout,300,Daemon timeout (s),2025-06-15,root,2025-06-15,CHG-2025-1234
+Partition,gpu,MaxNodes,96,,2025-06-15,root,2025-06-15,CHG-2025-1234
+Partition,cpu,Description,CPU-only partition,,2025-06-15,root,2025-06-15,CHG-2025-1234
+Partition,cpu,State,UP,,2025-06-15,root,2025-06-15,CHG-2025-1234
+Partition,debug,OverSubscribe,EXCLUSIVE,,2025-06-15,root,2025-06-15,CHG-2025-1234
+Partition,interactive,Features,gpu_a100,,2025-06-15,root,2025-06-15,CHG-2025-1234
+Partition,large,MaxTRES,"cpu=256,gres/gpu=64",,2025-06-15,root,2025-06-15,CHG-2025-1234
+Partition,priority,Default,NO,,2025-06-15,root,2025-06-15,CHG-2025-1234
+Partition,priority,PriorityTier,1,,2025-06-15,root,2025-06-15,CHG-2025-1234
+Partition,maintenance,GraceTime,0,,2025-06-15,root,2025-06-15,CHG-2025-1234
+Partition,burst,QOS,burst,,2025-06-15,root,2025-06-15,CHG-2025-1234
+Partition,preemptible,PreemptMode,requeue,,2025-06-15,root,2025-06-15,CHG-2025-1234
+Partition,reserved,MaxTime,UNLIMITED,,2025-06-15,root,2025-06-15,CHG-2025-1234
+QOS,normal,Priority,100,,2025-06-15,root,2025-06-15,CHG-2025-1234
+QOS,high,GrpTRES,"cpu=768,gres/gpu=128",,2025-06-15,root,2025-06-15,CHG-2025-1234
+QOS,low,Preempt,off,,2025-06-15,root,2025-06-15,CHG-2025-1234
+QOS,debug,GrpJobs,500,,2025-06-15,root,2025-06-15,CHG-2025-1234
+QOS,interactive,MaxJobsPerUser,100,,2025-06-15,root,2025-06-15,CHG-2025-1234
+QOS,large,MaxWall,72:00:00,,2025-06-15,root,2025-06-15,CHG-2025-1234
+QOS,burst,MaxTRESPerUser,"cpu=0,gres/gpu=0",,2025-06-15,root,2025-06-15,CHG-2025-1234
+QOS,preemptible,UsageFactor,1.0,,2025-06-15,root,2025-06-15,CHG-2025-1234
+QOS,maintenance,MaxJobsPerUser,100,,2025-06-15,root,2025-06-15,CHG-2025-1234
+QOS,biology_special,Priority,170,,2025-06-15,root,2025-06-15,CHG-2025-1234
+QOS,emergency,GrpTRES,"cpu=768,gres/gpu=768",,2025-06-15,root,2025-06-15,CHG-2025-1234
+QOS,benchmark,Preempt,off,,2025-06-15,root,2025-06-15,CHG-2025-1234
+QOS,training,GrpJobs,500,,2025-06-15,root,2025-06-15,CHG-2025-1234
+Account,Physics,FairShare,1000,,2025-01-15,admin,2025-01-15,CHG-2025-0456
+Account,Biology,FairShare,600,,2025-01-15,admin,2025-01-15,CHG-2025-0456
+Account,Biology,MaxTRES,"cpu=384,gres/gpu=128",,2025-01-15,admin,2025-01-15,CHG-2025-0456
+Account,Chemistry,FairShare,450,,2025-01-15,admin,2025-01-15,CHG-2025-0456
+Account,Chemistry,GrpTRESRunMins,"cpu=2000000,gres/gpu=500000",,2025-01-15,admin,2025-01-15,CHG-2025-0456
+Account,CS,FairShare,800,,2025-01-15,admin,2025-01-15,CHG-2025-0456
+Account,CS,MaxSubmitJobs,500,,2025-01-15,admin,2025-01-15,CHG-2025-0456
+Account,EarthSci,FairShare,350,,2025-01-15,admin,2025-01-15,CHG-2025-0456
+Account,EarthSci,MaxWallDurationPerJob,168:00:00,,2025-01-15,admin,2025-01-15,CHG-2025-0456
+Account,Math,FairShare,250,,2025-01-15,admin,2025-01-15,CHG-2025-0456
+Account,Math,AllowedQOS,"normal,high,low,debug,interactive",,2025-01-15,admin,2025-01-15,CHG-2025-0456
+Account,Engineering,FairShare,700,,2025-01-15,admin,2025-01-15,CHG-2025-0456
+Account,MedRes,FairShare,550,,2025-01-15,admin,2025-01-15,CHG-2025-0456
+Account,MedRes,GrpTRESRunMins,"cpu=2000000,gres/gpu=500000",,2025-01-15,admin,2025-01-15,CHG-2025-0456
+Association,user001,DefaultQOS,normal,,2025-03-01,admin,2025-03-01,CHG-2025-0789
+Association,user003,DefaultQOS,normal,,2025-03-01,admin,2025-03-01,CHG-2025-0789
+Association,user005,DefaultQOS,normal,,2025-03-01,admin,2025-03-01,CHG-2025-0789
+Association,user007,DefaultQOS,normal,,2025-03-01,admin,2025-03-01,CHG-2025-0789
+Association,user009,DefaultQOS,normal,,2025-03-01,admin,2025-03-01,CHG-2025-0789
+Association,user011,MaxTRES,"cpu=128,gres/gpu=64",,2025-03-01,admin,2025-03-01,CHG-2025-0789
+Association,user013,MaxTRES,"cpu=128,gres/gpu=64",,2025-03-01,admin,2025-03-01,CHG-2025-0789
+Association,user015,MaxTRES,"cpu=128,gres/gpu=16",,2025-03-01,admin,2025-03-01,CHG-2025-0789
+Association,user017,MaxTRES,"cpu=128,gres/gpu=8",,2025-03-01,admin,2025-03-01,CHG-2025-0789
+Association,user019,MaxTRES,"cpu=256,gres/gpu=16",,2025-03-01,admin,2025-03-01,CHG-2025-0789
+Association,user021,Account,Physics,,2025-03-01,admin,2025-03-01,CHG-2025-0789
+Association,user023,Account,MedRes,,2025-03-01,admin,2025-03-01,CHG-2025-0789
+Association,user025,Account,Physics,,2025-03-01,admin,2025-03-01,CHG-2025-0789
+Association,user027,Account,Chemistry,,2025-03-01,admin,2025-03-01,CHG-2025-0789
+Association,user029,Account,Engineering,,2025-03-01,admin,2025-03-01,CHG-2025-0789
+Association,user030,AdminLevel,,,2025-03-01,admin,2025-03-01,CHG-2025-0789
+Association,user032,AdminLevel,,,2025-03-01,admin,2025-03-01,CHG-2025-0789
+Association,user034,AdminLevel,,,2025-03-01,admin,2025-03-01,CHG-2025-0789
+Association,user036,AdminLevel,,,2025-03-01,admin,2025-03-01,CHG-2025-0789
+Association,user038,AdminLevel,,,2025-03-01,admin,2025-03-01,CHG-2025-0789
+Association,user040,AdminLevel,,,2025-03-01,admin,2025-03-01,CHG-2025-0789
+Association,user042,MaxJobs,50,,2025-03-01,admin,2025-03-01,CHG-2025-0789
+Association,user044,MaxJobs,20,,2025-03-01,admin,2025-03-01,CHG-2025-0789
+Association,user046,MaxJobs,100,,2025-03-01,admin,2025-03-01,CHG-2025-0789
+Association,user048,MaxJobs,20,,2025-03-01,admin,2025-03-01,CHG-2025-0789
+Association,user050,MaxJobs,20,,2025-03-01,admin,2025-03-01,CHG-2025-0789
+Association,user052,DefaultQOS,normal,,2025-03-01,admin,2025-03-01,CHG-2025-0789
+Association,user054,DefaultQOS,normal,,2025-03-01,admin,2025-03-01,CHG-2025-0789
+Association,user056,DefaultQOS,normal,,2025-03-01,admin,2025-03-01,CHG-2025-0789
+Association,user058,DefaultQOS,normal,,2025-03-01,admin,2025-03-01,CHG-2025-0789
+Association,user060,DefaultQOS,normal,,2025-03-01,admin,2025-03-01,CHG-2025-0789
+Association,user062,MaxTRES,"cpu=64,gres/gpu=64",,2025-03-01,admin,2025-03-01,CHG-2025-0789
+Association,user064,MaxTRES,"cpu=256,gres/gpu=32",,2025-03-01,admin,2025-03-01,CHG-2025-0789
+Association,user066,MaxTRES,"cpu=128,gres/gpu=8",,2025-03-01,admin,2025-03-01,CHG-2025-0789
+Association,user068,MaxTRES,"cpu=128,gres/gpu=64",,2025-03-01,admin,2025-03-01,CHG-2025-0789
+Association,user070,MaxTRES,"cpu=256,gres/gpu=32",,2025-03-01,admin,2025-03-01,CHG-2025-0789
+Association,user072,Account,Engineering,,2025-03-01,admin,2025-03-01,CHG-2025-0789
+Association,user074,Account,Chemistry,,2025-03-01,admin,2025-03-01,CHG-2025-0789
+Association,user076,Account,CS,,2025-03-01,admin,2025-03-01,CHG-2025-0789
+Association,user078,Account,Physics,,2025-03-01,admin,2025-03-01,CHG-2025-0789
+Association,user080,Account,Math,,2025-03-01,admin,2025-03-01,CHG-2025-0789
+Association,user081,AdminLevel,,,2025-03-01,admin,2025-03-01,CHG-2025-0789
+Association,user083,AdminLevel,,,2025-03-01,admin,2025-03-01,CHG-2025-0789
+Association,user085,AdminLevel,,,2025-03-01,admin,2025-03-01,CHG-2025-0789
+Association,user087,AdminLevel,,,2025-03-01,admin,2025-03-01,CHG-2025-0789
+Association,user089,AdminLevel,,,2025-03-01,admin,2025-03-01,CHG-2025-0789
+Association,user091,MaxJobs,50,,2025-03-01,admin,2025-03-01,CHG-2025-0789
+Association,user093,MaxJobs,20,,2025-03-01,admin,2025-03-01,CHG-2025-0789
+Association,user095,MaxJobs,50,,2025-03-01,admin,2025-03-01,CHG-2025-0789
+Association,user097,MaxJobs,50,,2025-03-01,admin,2025-03-01,CHG-2025-0789
+Association,user099,MaxJobs,50,,2025-03-01,admin,2025-03-01,CHG-2025-0789
+Association,user101,DefaultQOS,normal,,2025-03-01,admin,2025-03-01,CHG-2025-0789
+Association,user103,DefaultQOS,normal,,2025-03-01,admin,2025-03-01,CHG-2025-0789
+Association,user105,DefaultQOS,normal,,2025-03-01,admin,2025-03-01,CHG-2025-0789
+Association,user107,DefaultQOS,normal,,2025-03-01,admin,2025-03-01,CHG-2025-0789
+Association,user109,DefaultQOS,normal,,2025-03-01,admin,2025-03-01,CHG-2025-0789
+Association,user111,MaxTRES,"cpu=192,gres/gpu=64",,2025-03-01,admin,2025-03-01,CHG-2025-0789
+Association,user113,MaxTRES,"cpu=256,gres/gpu=32",,2025-03-01,admin,2025-03-01,CHG-2025-0789
+Association,user115,MaxTRES,"cpu=64,gres/gpu=32",,2025-03-01,admin,2025-03-01,CHG-2025-0789
+Association,user117,MaxTRES,"cpu=128,gres/gpu=64",,2025-03-01,admin,2025-03-01,CHG-2025-0789
+Association,user119,MaxTRES,"cpu=64,gres/gpu=64",,2025-03-01,admin,2025-03-01,CHG-2025-0789
+NodeConfig,hpc-gpu-001,Features,"gpu_a100,ib_hdr200,rack_rowA,mem_1tb,nvme_local,epyc7763",,2025-06-15,root,2025-06-15,CHG-2025-1234
+NodeConfig,hpc-gpu-003,Features,"gpu_a100,ib_hdr200,rack_rowA,mem_1tb,nvme_local,epyc7763",,2025-06-15,root,2025-06-15,CHG-2025-1234
+NodeConfig,hpc-gpu-005,Features,"gpu_a100,ib_hdr200,rack_rowA,mem_1tb,nvme_local,epyc7763",,2025-06-15,root,2025-06-15,CHG-2025-1234
+NodeConfig,hpc-gpu-007,Features,"gpu_a100,ib_hdr200,rack_rowA,mem_1tb,nvme_local,epyc7763",,2025-06-15,root,2025-06-15,CHG-2025-1234
+NodeConfig,hpc-gpu-009,Features,"gpu_a100,ib_hdr200,rack_rowA,mem_1tb,nvme_local,epyc7763",,2025-06-15,root,2025-06-15,CHG-2025-1234
+NodeConfig,hpc-gpu-010,State,MIXED,,2025-06-15,root,2025-06-15,CHG-2025-1234
+NodeConfig,hpc-gpu-012,State,IDLE,,2025-06-15,root,2025-06-15,CHG-2025-1234
+NodeConfig,hpc-gpu-014,State,IDLE,,2025-06-15,root,2025-06-15,CHG-2025-1234
+NodeConfig,hpc-gpu-016,State,IDLE,,2025-06-15,root,2025-06-15,CHG-2025-1234
+NodeConfig,hpc-gpu-018,State,IDLE,,2025-06-15,root,2025-06-15,CHG-2025-1234
+NodeConfig,hpc-gpu-020,State,IDLE,,2025-06-15,root,2025-06-15,CHG-2025-1234
+NodeConfig,hpc-gpu-022,Weight,11,,2025-06-15,root,2025-06-15,CHG-2025-1234
+NodeConfig,hpc-gpu-024,Weight,62,,2025-06-15,root,2025-06-15,CHG-2025-1234
+NodeConfig,hpc-gpu-026,Weight,8,,2025-06-15,root,2025-06-15,CHG-2025-1234
+NodeConfig,hpc-gpu-028,Weight,60,,2025-06-15,root,2025-06-15,CHG-2025-1234
+NodeConfig,hpc-gpu-030,Weight,86,,2025-06-15,root,2025-06-15,CHG-2025-1234
+NodeConfig,hpc-gpu-032,RealMemory,1048576,,2025-06-15,root,2025-06-15,CHG-2025-1234
+NodeConfig,hpc-gpu-034,RealMemory,1048576,,2025-06-15,root,2025-06-15,CHG-2025-1234
+NodeConfig,hpc-gpu-036,RealMemory,1048576,,2025-06-15,root,2025-06-15,CHG-2025-1234
+NodeConfig,hpc-gpu-038,RealMemory,1048576,,2025-06-15,root,2025-06-15,CHG-2025-1234
+NodeConfig,hpc-gpu-040,RealMemory,1048576,,2025-06-15,root,2025-06-15,CHG-2025-1234
+NodeConfig,hpc-gpu-042,Gres,gpu:a100:8,,2025-06-15,root,2025-06-15,CHG-2025-1234
+NodeConfig,hpc-gpu-044,Gres,gpu:a100:6,,2025-06-15,root,2025-06-15,CHG-2025-1234
+NodeConfig,hpc-gpu-046,Gres,gpu:a100:6,,2025-06-15,root,2025-06-15,CHG-2025-1234
+NodeConfig,hpc-gpu-048,Gres,gpu:a100:8,,2025-06-15,root,2025-06-15,CHG-2025-1234
+NodeConfig,hpc-gpu-050,Gres,gpu:a100:8,,2025-06-15,root,2025-06-15,CHG-2025-1234
+NodeConfig,hpc-gpu-052,Features,"gpu_a100,ib_hdr200,rack_rowC,mem_1tb,nvme_local,epyc7763",,2025-06-15,root,2025-06-15,CHG-2025-1234
+NodeConfig,hpc-gpu-054,Features,"gpu_a100,ib_hdr200,rack_rowC,mem_1tb,nvme_local,epyc7763",,2025-06-15,root,2025-06-15,CHG-2025-1234
+NodeConfig,hpc-gpu-056,Features,"gpu_a100,ib_hdr200,rack_rowC,mem_1tb,nvme_local,epyc7763",,2025-06-15,root,2025-06-15,CHG-2025-1234
+NodeConfig,hpc-gpu-058,Features,"gpu_a100,ib_hdr200,rack_rowC,mem_1tb,nvme_local,epyc7763",,2025-06-15,root,2025-06-15,CHG-2025-1234
+NodeConfig,hpc-gpu-060,Features,"gpu_a100,ib_hdr200,rack_rowC,mem_1tb,nvme_local,epyc7763",,2025-06-15,root,2025-06-15,CHG-2025-1234
+NodeConfig,hpc-gpu-061,State,IDLE,,2025-06-15,root,2025-06-15,CHG-2025-1234
+NodeConfig,hpc-gpu-063,State,IDLE,,2025-06-15,root,2025-06-15,CHG-2025-1234
+NodeConfig,hpc-gpu-065,State,IDLE,,2025-06-15,root,2025-06-15,CHG-2025-1234
+NodeConfig,hpc-gpu-067,State,IDLE,,2025-06-15,root,2025-06-15,CHG-2025-1234
+NodeConfig,hpc-gpu-069,State,IDLE,,2025-06-15,root,2025-06-15,CHG-2025-1234
+NodeConfig,hpc-gpu-071,Weight,75,,2025-06-15,root,2025-06-15,CHG-2025-1234
+NodeConfig,hpc-gpu-073,Weight,72,,2025-06-15,root,2025-06-15,CHG-2025-1234
+NodeConfig,hpc-gpu-075,Weight,51,,2025-06-15,root,2025-06-15,CHG-2025-1234
+NodeConfig,hpc-gpu-077,Weight,25,,2025-06-15,root,2025-06-15,CHG-2025-1234
+NodeConfig,hpc-gpu-079,Weight,38,,2025-06-15,root,2025-06-15,CHG-2025-1234
+NodeConfig,hpc-gpu-081,RealMemory,1048576,,2025-06-15,root,2025-06-15,CHG-2025-1234
+NodeConfig,hpc-gpu-083,RealMemory,1048576,,2025-06-15,root,2025-06-15,CHG-2025-1234
+NodeConfig,hpc-gpu-085,RealMemory,1048576,,2025-06-15,root,2025-06-15,CHG-2025-1234
+NodeConfig,hpc-gpu-087,RealMemory,1048576,,2025-06-15,root,2025-06-15,CHG-2025-1234
+NodeConfig,hpc-gpu-089,RealMemory,1048576,,2025-06-15,root,2025-06-15,CHG-2025-1234
+NodeConfig,hpc-gpu-091,Gres,gpu:a100:8,,2025-06-15,root,2025-06-15,CHG-2025-1234
+NodeConfig,hpc-gpu-093,Gres,gpu:a100:8,,2025-06-15,root,2025-06-15,CHG-2025-1234
+NodeConfig,hpc-gpu-095,Gres,gpu:a100:8,,2025-06-15,root,2025-06-15,CHG-2025-1234
+NodeConfig,hpc-cpu-001,Gres,(null),,2025-06-15,root,2025-06-15,CHG-2025-1234
+NodeConfig,hpc-cpu-003,Gres,(null),,2025-06-15,root,2025-06-15,CHG-2025-1234
+NodeConfig,hpc-cpu-005,Features,"cpu_only,ib_hdr100,rack_rowD,mem_512g,epyc7742",,2025-06-15,root,2025-06-15,CHG-2025-1234
+NodeConfig,hpc-cpu-007,Features,"cpu_only,ib_hdr100,rack_rowD,mem_512g,epyc7742",,2025-06-15,root,2025-06-15,CHG-2025-1234
+NodeConfig,hpc-cpu-009,Features,"cpu_only,ib_hdr100,rack_rowD,mem_512g,epyc7742",,2025-06-15,root,2025-06-15,CHG-2025-1234
+NodeConfig,hpc-cpu-011,Features,"cpu_only,ib_hdr100,rack_rowD,mem_512g,epyc7742",,2025-06-15,root,2025-06-15,CHG-2025-1234
+NodeConfig,hpc-cpu-013,Features,"cpu_only,ib_hdr100,rack_rowD,mem_512g,epyc7742",,2025-06-15,root,2025-06-15,CHG-2025-1234
+NodeConfig,hpc-cpu-014,State,IDLE,,2025-06-15,root,2025-06-15,CHG-2025-1234
+NodeConfig,hpc-cpu-016,State,IDLE,,2025-06-15,root,2025-06-15,CHG-2025-1234
+NodeConfig,hpc-cpu-018,State,IDLE,,2025-06-15,root,2025-06-15,CHG-2025-1234
+NodeConfig,hpc-cpu-020,State,IDLE,,2025-06-15,root,2025-06-15,CHG-2025-1234
+NodeConfig,hpc-cpu-022,State,IDLE,,2025-06-15,root,2025-06-15,CHG-2025-1234
+NodeConfig,hpc-cpu-024,State,IDLE,,2025-06-15,root,2025-06-15,CHG-2025-1234
+NodeConfig,hpc-cpu-026,Weight,5,,2025-06-15,root,2025-06-15,CHG-2025-1234
+NodeConfig,hpc-cpu-028,Weight,3,,2025-06-15,root,2025-06-15,CHG-2025-1234
+Reservation,maint_Feb,Nodes,ALL,Feb monthly maintenance,2025-12-01,admin,2025-12-01,CHG-2025-2345
+Reservation,maint_Apr,StartTime,2026-04-15T06:00:00,Apr monthly maintenance,2025-12-01,admin,2025-12-01,CHG-2025-2345
+Reservation,maint_May,Users,"root,slurm",May monthly maintenance,2025-12-01,admin,2025-12-01,CHG-2025-2345
+Reservation,maint_Jul,Duration,06:00:00,Jul monthly maintenance,2025-12-01,admin,2025-12-01,CHG-2025-2345
+Reservation,maint_Aug,Accounts,ALL,Aug monthly maintenance,2025-12-01,admin,2025-12-01,CHG-2025-2345
+Reservation,maint_Oct,Flags,"MAINT,IGNORE_JOBS",Oct monthly maintenance,2025-12-01,admin,2025-12-01,CHG-2025-2345
+Reservation,maint_Dec,Duration,06:00:00,Dec monthly maintenance,2025-12-01,admin,2025-12-01,CHG-2025-2345
+CgroupConfig,cgroup.conf,MaxRAMPercent,100,Max RAM percentage,2025-06-15,root,2025-06-15,CHG-2025-1234
+JobHistory,user001,Month_Feb,"jobs=21,gpu_hours=337,cpu_hours=12275,wait_avg=112min,fail_rate=0.139",Feb usage statistics for Chemistry department,2026-06-30,slurmdbd,2026-06-30,AUTO
+JobHistory,user001,Month_Dec,"jobs=449,gpu_hours=395,cpu_hours=14740,wait_avg=11min,fail_rate=0.023",Dec usage statistics for Chemistry department,2026-06-30,slurmdbd,2026-06-30,AUTO
+JobHistory,user002,Month_Oct,"jobs=471,gpu_hours=1345,cpu_hours=2437,wait_avg=64min,fail_rate=0.028",Oct usage statistics for Engineering department,2026-06-30,slurmdbd,2026-06-30,AUTO
+JobHistory,user003,Month_Aug,"jobs=259,gpu_hours=5469,cpu_hours=11984,wait_avg=113min,fail_rate=0.029",Aug usage statistics for MedRes department,2026-06-30,slurmdbd,2026-06-30,AUTO
+JobHistory,user004,Month_Jun,"jobs=131,gpu_hours=1464,cpu_hours=16548,wait_avg=55min,fail_rate=0.12",Jun usage statistics for CS department,2026-06-30,slurmdbd,2026-06-30,AUTO
+JobHistory,user005,Month_Mar,"jobs=126,gpu_hours=9950,cpu_hours=10187,wait_avg=93min,fail_rate=0.112",Mar usage statistics for Math department,2026-06-30,slurmdbd,2026-06-30,AUTO
+JobHistory,user006,Month_Jan,"jobs=305,gpu_hours=7153,cpu_hours=1689,wait_avg=5min,fail_rate=0.132",Jan usage statistics for Biology department,2026-06-30,slurmdbd,2026-06-30,AUTO
+JobHistory,user006,Month_Nov,"jobs=389,gpu_hours=7772,cpu_hours=13606,wait_avg=34min,fail_rate=0.106",Nov usage statistics for Biology department,2026-06-30,slurmdbd,2026-06-30,AUTO
+JobHistory,user007,Month_Sep,"jobs=487,gpu_hours=897,cpu_hours=10208,wait_avg=47min,fail_rate=0.061",Sep usage statistics for MedRes department,2026-06-30,slurmdbd,2026-06-30,AUTO
+JobHistory,user008,Month_Jul,"jobs=351,gpu_hours=1712,cpu_hours=12870,wait_avg=85min,fail_rate=0.083",Jul usage statistics for Chemistry department,2026-06-30,slurmdbd,2026-06-30,AUTO
+JobHistory,user009,Month_Apr,"jobs=232,gpu_hours=6088,cpu_hours=18698,wait_avg=118min,fail_rate=0.131",Apr usage statistics for Biology department,2026-06-30,slurmdbd,2026-06-30,AUTO
+JobHistory,user010,Month_Feb,"jobs=118,gpu_hours=3565,cpu_hours=6390,wait_avg=100min,fail_rate=0.043",Feb usage statistics for Engineering department,2026-06-30,slurmdbd,2026-06-30,AUTO
+JobHistory,user010,Month_Dec,"jobs=419,gpu_hours=8482,cpu_hours=18317,wait_avg=109min,fail_rate=0.048",Dec usage statistics for Engineering department,2026-06-30,slurmdbd,2026-06-30,AUTO
+JobHistory,user011,Month_Oct,"jobs=231,gpu_hours=5406,cpu_hours=3646,wait_avg=87min,fail_rate=0.042",Oct usage statistics for Chemistry department,2026-06-30,slurmdbd,2026-06-30,AUTO
+JobHistory,user012,Month_Aug,"jobs=90,gpu_hours=9978,cpu_hours=12515,wait_avg=41min,fail_rate=0.061",Aug usage statistics for CS department,2026-06-30,slurmdbd,2026-06-30,AUTO
+JobHistory,user013,Month_May,"jobs=318,gpu_hours=1643,cpu_hours=17989,wait_avg=89min,fail_rate=0.06",May usage statistics for Math department,2026-06-30,slurmdbd,2026-06-30,AUTO
+JobHistory,user014,Month_Mar,"jobs=256,gpu_hours=9004,cpu_hours=4114,wait_avg=111min,fail_rate=0.132",Mar usage statistics for MedRes department,2026-06-30,slurmdbd,2026-06-30,AUTO
+JobHistory,user015,Month_Jan,"jobs=354,gpu_hours=7732,cpu_hours=15587,wait_avg=69min,fail_rate=0.146",Jan usage statistics for Math department,2026-06-30,slurmdbd,2026-06-30,AUTO
+JobHistory,user015,Month_Nov,"jobs=422,gpu_hours=3287,cpu_hours=19867,wait_avg=91min,fail_rate=0.143",Nov usage statistics for Math department,2026-06-30,slurmdbd,2026-06-30,AUTO
+JobHistory,user016,Month_Sep,"jobs=148,gpu_hours=9223,cpu_hours=14758,wait_avg=76min,fail_rate=0.134",Sep usage statistics for CS department,2026-06-30,slurmdbd,2026-06-30,AUTO
+JobHistory,user017,Month_Jun,"jobs=315,gpu_hours=1016,cpu_hours=4944,wait_avg=38min,fail_rate=0.035",Jun usage statistics for Physics department,2026-06-30,slurmdbd,2026-06-30,AUTO
+JobHistory,user018,Month_Apr,"jobs=194,gpu_hours=1930,cpu_hours=8087,wait_avg=45min,fail_rate=0.057",Apr usage statistics for Chemistry department,2026-06-30,slurmdbd,2026-06-30,AUTO
+JobHistory,user019,Month_Feb,"jobs=165,gpu_hours=4809,cpu_hours=10868,wait_avg=90min,fail_rate=0.051",Feb usage statistics for Physics department,2026-06-30,slurmdbd,2026-06-30,AUTO
+JobHistory,user019,Month_Dec,"jobs=273,gpu_hours=1398,cpu_hours=17675,wait_avg=109min,fail_rate=0.065",Dec usage statistics for Physics department,2026-06-30,slurmdbd,2026-06-30,AUTO
+JobHistory,user020,Month_Oct,"jobs=24,gpu_hours=9186,cpu_hours=12827,wait_avg=111min,fail_rate=0.145",Oct usage statistics for EarthSci department,2026-06-30,slurmdbd,2026-06-30,AUTO
+JobHistory,user021,Month_Jul,"jobs=301,gpu_hours=9170,cpu_hours=7941,wait_avg=109min,fail_rate=0.029",Jul usage statistics for Chemistry department,2026-06-30,slurmdbd,2026-06-30,AUTO
+JobHistory,user022,Month_May,"jobs=290,gpu_hours=8354,cpu_hours=9405,wait_avg=74min,fail_rate=0.066",May usage statistics for Physics department,2026-06-30,slurmdbd,2026-06-30,AUTO
+JobHistory,user023,Month_Mar,"jobs=81,gpu_hours=3713,cpu_hours=4646,wait_avg=33min,fail_rate=0.038",Mar usage statistics for Physics department,2026-06-30,slurmdbd,2026-06-30,AUTO
+JobHistory,user024,Month_Jan,"jobs=442,gpu_hours=3368,cpu_hours=10699,wait_avg=95min,fail_rate=0.122",Jan usage statistics for Physics department,2026-06-30,slurmdbd,2026-06-30,AUTO
+JobHistory,user024,Month_Nov,"jobs=123,gpu_hours=2515,cpu_hours=4278,wait_avg=46min,fail_rate=0.061",Nov usage statistics for Physics department,2026-06-30,slurmdbd,2026-06-30,AUTO
+JobHistory,user025,Month_Aug,"jobs=199,gpu_hours=479,cpu_hours=18711,wait_avg=19min,fail_rate=0.131",Aug usage statistics for EarthSci department,2026-06-30,slurmdbd,2026-06-30,AUTO
+JobHistory,user026,Month_Jun,"jobs=441,gpu_hours=927,cpu_hours=11118,wait_avg=10min,fail_rate=0.093",Jun usage statistics for Engineering department,2026-06-30,slurmdbd,2026-06-30,AUTO
+JobHistory,user027,Month_Apr,"jobs=438,gpu_hours=8209,cpu_hours=14116,wait_avg=109min,fail_rate=0.076",Apr usage statistics for CS department,2026-06-30,slurmdbd,2026-06-30,AUTO
+JobHistory,user028,Month_Feb,"jobs=452,gpu_hours=1565,cpu_hours=4971,wait_avg=5min,fail_rate=0.124",Feb usage statistics for Engineering department,2026-06-30,slurmdbd,2026-06-30,AUTO
+JobHistory,user028,Month_Dec,"jobs=227,gpu_hours=4263,cpu_hours=11182,wait_avg=99min,fail_rate=0.138",Dec usage statistics for Engineering department,2026-06-30,slurmdbd,2026-06-30,AUTO
+JobHistory,user029,Month_Sep,"jobs=231,gpu_hours=7643,cpu_hours=12326,wait_avg=26min,fail_rate=0.052",Sep usage statistics for CS department,2026-06-30,slurmdbd,2026-06-30,AUTO
+JobHistory,user030,Month_Jul,"jobs=339,gpu_hours=8676,cpu_hours=10954,wait_avg=117min,fail_rate=0.05",Jul usage statistics for Physics department,2026-06-30,slurmdbd,2026-06-30,AUTO
+JobHistory,user031,Month_May,"jobs=406,gpu_hours=1240,cpu_hours=12553,wait_avg=7min,fail_rate=0.116",May usage statistics for EarthSci department,2026-06-30,slurmdbd,2026-06-30,AUTO
+JobHistory,user032,Month_Mar,"jobs=90,gpu_hours=6710,cpu_hours=7438,wait_avg=94min,fail_rate=0.068",Mar usage statistics for MedRes department,2026-06-30,slurmdbd,2026-06-30,AUTO
+JobHistory,user033,Month_Jan,"jobs=183,gpu_hours=1761,cpu_hours=7682,wait_avg=64min,fail_rate=0.073",Jan usage statistics for Math department,2026-06-30,slurmdbd,2026-06-30,AUTO
+JobHistory,user033,Month_Nov,"jobs=35,gpu_hours=1889,cpu_hours=3570,wait_avg=57min,fail_rate=0.103",Nov usage statistics for Math department,2026-06-30,slurmdbd,2026-06-30,AUTO
+JobHistory,user034,Month_Aug,"jobs=257,gpu_hours=7238,cpu_hours=10517,wait_avg=28min,fail_rate=0.063",Aug usage statistics for Physics department,2026-06-30,slurmdbd,2026-06-30,AUTO
+JobHistory,user035,Month_Jun,"jobs=458,gpu_hours=3176,cpu_hours=8918,wait_avg=69min,fail_rate=0.105",Jun usage statistics for Chemistry department,2026-06-30,slurmdbd,2026-06-30,AUTO
+JobHistory,user036,Month_Apr,"jobs=304,gpu_hours=5549,cpu_hours=3951,wait_avg=17min,fail_rate=0.121",Apr usage statistics for Physics department,2026-06-30,slurmdbd,2026-06-30,AUTO
+JobHistory,user037,Month_Feb,"jobs=480,gpu_hours=6753,cpu_hours=1519,wait_avg=26min,fail_rate=0.126",Feb usage statistics for CS department,2026-06-30,slurmdbd,2026-06-30,AUTO
+JobHistory,user037,Month_Dec,"jobs=264,gpu_hours=9385,cpu_hours=2961,wait_avg=40min,fail_rate=0.149",Dec usage statistics for CS department,2026-06-30,slurmdbd,2026-06-30,AUTO
+JobHistory,user038,Month_Sep,"jobs=98,gpu_hours=2989,cpu_hours=16933,wait_avg=8min,fail_rate=0.141",Sep usage statistics for Math department,2026-06-30,slurmdbd,2026-06-30,AUTO
+JobHistory,user039,Month_Jul,"jobs=215,gpu_hours=1555,cpu_hours=16678,wait_avg=95min,fail_rate=0.14",Jul usage statistics for EarthSci department,2026-06-30,slurmdbd,2026-06-30,AUTO
+JobHistory,user040,Month_May,"jobs=111,gpu_hours=6071,cpu_hours=8775,wait_avg=32min,fail_rate=0.02",May usage statistics for CS department,2026-06-30,slurmdbd,2026-06-30,AUTO
+JobHistory,user041,Month_Mar,"jobs=453,gpu_hours=8906,cpu_hours=15422,wait_avg=49min,fail_rate=0.034",Mar usage statistics for CS department,2026-06-30,slurmdbd,2026-06-30,AUTO
+JobHistory,user042,Month_Jan,"jobs=218,gpu_hours=9951,cpu_hours=237,wait_avg=63min,fail_rate=0.055",Jan usage statistics for Physics department,2026-06-30,slurmdbd,2026-06-30,AUTO
+JobHistory,user042,Month_Oct,"jobs=39,gpu_hours=1559,cpu_hours=19970,wait_avg=8min,fail_rate=0.092",Oct usage statistics for Physics department,2026-06-30,slurmdbd,2026-06-30,AUTO
+JobHistory,user043,Month_Aug,"jobs=119,gpu_hours=9008,cpu_hours=19244,wait_avg=82min,fail_rate=0.012",Aug usage statistics for EarthSci department,2026-06-30,slurmdbd,2026-06-30,AUTO
+JobHistory,user044,Month_Jun,"jobs=77,gpu_hours=8516,cpu_hours=1046,wait_avg=13min,fail_rate=0.057",Jun usage statistics for Physics department,2026-06-30,slurmdbd,2026-06-30,AUTO
+JobHistory,user045,Month_Apr,"jobs=158,gpu_hours=8801,cpu_hours=5832,wait_avg=59min,fail_rate=0.07",Apr usage statistics for MedRes department,2026-06-30,slurmdbd,2026-06-30,AUTO
+JobHistory,user046,Month_Feb,"jobs=477,gpu_hours=5312,cpu_hours=4330,wait_avg=96min,fail_rate=0.115",Feb usage statistics for Chemistry department,2026-06-30,slurmdbd,2026-06-30,AUTO
+JobHistory,user046,Month_Nov,"jobs=112,gpu_hours=6211,cpu_hours=4591,wait_avg=114min,fail_rate=0.139",Nov usage statistics for Chemistry department,2026-06-30,slurmdbd,2026-06-30,AUTO
+JobHistory,user047,Month_Sep,"jobs=198,gpu_hours=5505,cpu_hours=16005,wait_avg=66min,fail_rate=0.078",Sep usage statistics for Math department,2026-06-30,slurmdbd,2026-06-30,AUTO
+JobHistory,user048,Month_Jul,"jobs=234,gpu_hours=6984,cpu_hours=14490,wait_avg=78min,fail_rate=0.046",Jul usage statistics for Math department,2026-06-30,slurmdbd,2026-06-30,AUTO
+JobHistory,user049,Month_May,"jobs=331,gpu_hours=9082,cpu_hours=11908,wait_avg=97min,fail_rate=0.097",May usage statistics for Math department,2026-06-30,slurmdbd,2026-06-30,AUTO
+JobHistory,user050,Month_Mar,"jobs=168,gpu_hours=8230,cpu_hours=286,wait_avg=107min,fail_rate=0.033",Mar usage statistics for Chemistry department,2026-06-30,slurmdbd,2026-06-30,AUTO
+JobHistory,user050,Month_Dec,"jobs=27,gpu_hours=6130,cpu_hours=3202,wait_avg=99min,fail_rate=0.121",Dec usage statistics for Chemistry department,2026-06-30,slurmdbd,2026-06-30,AUTO
+JobHistory,user051,Month_Oct,"jobs=370,gpu_hours=9507,cpu_hours=1142,wait_avg=96min,fail_rate=0.08",Oct usage statistics for MedRes department,2026-06-30,slurmdbd,2026-06-30,AUTO
+JobHistory,user052,Month_Aug,"jobs=240,gpu_hours=1574,cpu_hours=13251,wait_avg=106min,fail_rate=0.053",Aug usage statistics for CS department,2026-06-30,slurmdbd,2026-06-30,AUTO
+JobHistory,user053,Month_Jun,"jobs=364,gpu_hours=4321,cpu_hours=12392,wait_avg=71min,fail_rate=0.022",Jun usage statistics for Math department,2026-06-30,slurmdbd,2026-06-30,AUTO
+JobHistory,user054,Month_Apr,"jobs=291,gpu_hours=2072,cpu_hours=2374,wait_avg=52min,fail_rate=0.135",Apr usage statistics for Physics department,2026-06-30,slurmdbd,2026-06-30,AUTO
+JobHistory,user055,Month_Jan,"jobs=396,gpu_hours=4990,cpu_hours=7202,wait_avg=78min,fail_rate=0.102",Jan usage statistics for Physics department,2026-06-30,slurmdbd,2026-06-30,AUTO
+JobHistory,user055,Month_Nov,"jobs=218,gpu_hours=5807,cpu_hours=18104,wait_avg=75min,fail_rate=0.136",Nov usage statistics for Physics department,2026-06-30,slurmdbd,2026-06-30,AUTO
+JobHistory,user056,Month_Sep,"jobs=128,gpu_hours=5463,cpu_hours=10733,wait_avg=6min,fail_rate=0.116",Sep usage statistics for Biology department,2026-06-30,slurmdbd,2026-06-30,AUTO
+JobHistory,user057,Month_Jul,"jobs=203,gpu_hours=5680,cpu_hours=16484,wait_avg=18min,fail_rate=0.077",Jul usage statistics for Math department,2026-06-30,slurmdbd,2026-06-30,AUTO
+JobHistory,user058,Month_May,"jobs=480,gpu_hours=4233,cpu_hours=3903,wait_avg=6min,fail_rate=0.126",May usage statistics for EarthSci department,2026-06-30,slurmdbd,2026-06-30,AUTO
+JobHistory,user059,Month_Feb,"jobs=257,gpu_hours=476,cpu_hours=978,wait_avg=32min,fail_rate=0.137",Feb usage statistics for Physics department,2026-06-30,slurmdbd,2026-06-30,AUTO
+JobHistory,user059,Month_Dec,"jobs=51,gpu_hours=5300,cpu_hours=19320,wait_avg=69min,fail_rate=0.15",Dec usage statistics for Physics department,2026-06-30,slurmdbd,2026-06-30,AUTO
+JobHistory,user060,Month_Oct,"jobs=433,gpu_hours=4720,cpu_hours=1370,wait_avg=10min,fail_rate=0.09",Oct usage statistics for Math department,2026-06-30,slurmdbd,2026-06-30,AUTO
+JobHistory,user061,Month_Aug,"jobs=389,gpu_hours=5446,cpu_hours=13914,wait_avg=16min,fail_rate=0.103",Aug usage statistics for Biology department,2026-06-30,slurmdbd,2026-06-30,AUTO
+JobHistory,user062,Month_Jun,"jobs=261,gpu_hours=5961,cpu_hours=11933,wait_avg=99min,fail_rate=0.13",Jun usage statistics for Engineering department,2026-06-30,slurmdbd,2026-06-30,AUTO
+JobHistory,user063,Month_Mar,"jobs=170,gpu_hours=9731,cpu_hours=4477,wait_avg=29min,fail_rate=0.142",Mar usage statistics for EarthSci department,2026-06-30,slurmdbd,2026-06-30,AUTO
+JobHistory,user064,Month_Jan,"jobs=491,gpu_hours=485,cpu_hours=11926,wait_avg=35min,fail_rate=0.056",Jan usage statistics for EarthSci department,2026-06-30,slurmdbd,2026-06-30,AUTO
+JobHistory,user064,Month_Nov,"jobs=349,gpu_hours=1578,cpu_hours=9823,wait_avg=25min,fail_rate=0.117",Nov usage statistics for EarthSci department,2026-06-30,slurmdbd,2026-06-30,AUTO
+JobHistory,user065,Month_Sep,"jobs=456,gpu_hours=5940,cpu_hours=7345,wait_avg=96min,fail_rate=0.102",Sep usage statistics for Biology department,2026-06-30,slurmdbd,2026-06-30,AUTO
+JobHistory,user066,Month_Jul,"jobs=327,gpu_hours=669,cpu_hours=15015,wait_avg=84min,fail_rate=0.016",Jul usage statistics for Math department,2026-06-30,slurmdbd,2026-06-30,AUTO
+JobHistory,user067,Month_Apr,"jobs=52,gpu_hours=5728,cpu_hours=4368,wait_avg=49min,fail_rate=0.142",Apr usage statistics for MedRes department,2026-06-30,slurmdbd,2026-06-30,AUTO
+JobHistory,user068,Month_Feb,"jobs=179,gpu_hours=9895,cpu_hours=8000,wait_avg=97min,fail_rate=0.127",Feb usage statistics for Math department,2026-06-30,slurmdbd,2026-06-30,AUTO
+JobHistory,user068,Month_Dec,"jobs=424,gpu_hours=3712,cpu_hours=4980,wait_avg=118min,fail_rate=0.15",Dec usage statistics for Math department,2026-06-30,slurmdbd,2026-06-30,AUTO
+JobHistory,user069,Month_Oct,"jobs=72,gpu_hours=765,cpu_hours=9993,wait_avg=33min,fail_rate=0.091",Oct usage statistics for EarthSci department,2026-06-30,slurmdbd,2026-06-30,AUTO
+JobHistory,user070,Month_Aug,"jobs=458,gpu_hours=335,cpu_hours=12035,wait_avg=89min,fail_rate=0.053",Aug usage statistics for Math department,2026-06-30,slurmdbd,2026-06-30,AUTO
+JobHistory,user071,Month_May,"jobs=56,gpu_hours=8115,cpu_hours=12075,wait_avg=59min,fail_rate=0.012",May usage statistics for Biology department,2026-06-30,slurmdbd,2026-06-30,AUTO
+JobHistory,user072,Month_Mar,"jobs=255,gpu_hours=3724,cpu_hours=5753,wait_avg=63min,fail_rate=0.131",Mar usage statistics for Math department,2026-06-30,slurmdbd,2026-06-30,AUTO
+JobHistory,user073,Month_Jan,"jobs=88,gpu_hours=2637,cpu_hours=13678,wait_avg=77min,fail_rate=0.026",Jan usage statistics for CS department,2026-06-30,slurmdbd,2026-06-30,AUTO
+JobHistory,user073,Month_Nov,"jobs=30,gpu_hours=1657,cpu_hours=2422,wait_avg=67min,fail_rate=0.068",Nov usage statistics for CS department,2026-06-30,slurmdbd,2026-06-30,AUTO
+JobHistory,user074,Month_Sep,"jobs=70,gpu_hours=2455,cpu_hours=15884,wait_avg=79min,fail_rate=0.119",Sep usage statistics for Engineering department,2026-06-30,slurmdbd,2026-06-30,AUTO
+JobHistory,user075,Month_Jun,"jobs=305,gpu_hours=2195,cpu_hours=12232,wait_avg=63min,fail_rate=0.036",Jun usage statistics for Math department,2026-06-30,slurmdbd,2026-06-30,AUTO
+JobHistory,user076,Month_Apr,"jobs=166,gpu_hours=8611,cpu_hours=14127,wait_avg=115min,fail_rate=0.135",Apr usage statistics for Physics department,2026-06-30,slurmdbd,2026-06-30,AUTO
+JobHistory,user077,Month_Feb,"jobs=473,gpu_hours=8150,cpu_hours=8258,wait_avg=53min,fail_rate=0.036",Feb usage statistics for Chemistry department,2026-06-30,slurmdbd,2026-06-30,AUTO
+JobHistory,user077,Month_Dec,"jobs=475,gpu_hours=4277,cpu_hours=802,wait_avg=48min,fail_rate=0.095",Dec usage statistics for Chemistry department,2026-06-30,slurmdbd,2026-06-30,AUTO
+JobHistory,user078,Month_Oct,"jobs=485,gpu_hours=4841,cpu_hours=2761,wait_avg=10min,fail_rate=0.083",Oct usage statistics for Biology department,2026-06-30,slurmdbd,2026-06-30,AUTO
+JobHistory,user079,Month_Aug,"jobs=229,gpu_hours=4109,cpu_hours=12199,wait_avg=117min,fail_rate=0.082",Aug usage statistics for Physics department,2026-06-30,slurmdbd,2026-06-30,AUTO
+JobHistory,user080,Month_May,"jobs=385,gpu_hours=6114,cpu_hours=280,wait_avg=18min,fail_rate=0.096",May usage statistics for Math department,2026-06-30,slurmdbd,2026-06-30,AUTO
+JobHistory,user081,Month_Mar,"jobs=312,gpu_hours=4892,cpu_hours=3913,wait_avg=41min,fail_rate=0.017",Mar usage statistics for EarthSci department,2026-06-30,slurmdbd,2026-06-30,AUTO
+JobHistory,user082,Month_Jan,"jobs=404,gpu_hours=2553,cpu_hours=9828,wait_avg=65min,fail_rate=0.129",Jan usage statistics for CS department,2026-06-30,slurmdbd,2026-06-30,AUTO
+JobHistory,user082,Month_Nov,"jobs=308,gpu_hours=7701,cpu_hours=9833,wait_avg=95min,fail_rate=0.123",Nov usage statistics for CS department,2026-06-30,slurmdbd,2026-06-30,AUTO
+JobHistory,user083,Month_Sep,"jobs=298,gpu_hours=8807,cpu_hours=6580,wait_avg=84min,fail_rate=0.122",Sep usage statistics for CS department,2026-06-30,slurmdbd,2026-06-30,AUTO
+JobHistory,user084,Month_Jun,"jobs=387,gpu_hours=3990,cpu_hours=1291,wait_avg=13min,fail_rate=0.12",Jun usage statistics for CS department,2026-06-30,slurmdbd,2026-06-30,AUTO
+JobHistory,user085,Month_Apr,"jobs=390,gpu_hours=335,cpu_hours=13953,wait_avg=70min,fail_rate=0.072",Apr usage statistics for CS department,2026-06-30,slurmdbd,2026-06-30,AUTO
+JobHistory,user086,Month_Feb,"jobs=15,gpu_hours=684,cpu_hours=8748,wait_avg=73min,fail_rate=0.149",Feb usage statistics for Chemistry department,2026-06-30,slurmdbd,2026-06-30,AUTO
+JobHistory,user086,Month_Dec,"jobs=244,gpu_hours=9815,cpu_hours=11153,wait_avg=44min,fail_rate=0.143",Dec usage statistics for Chemistry department,2026-06-30,slurmdbd,2026-06-30,AUTO
+JobHistory,user087,Month_Oct,"jobs=38,gpu_hours=2184,cpu_hours=19138,wait_avg=24min,fail_rate=0.118",Oct usage statistics for Engineering department,2026-06-30,slurmdbd,2026-06-30,AUTO
+JobHistory,user088,Month_Jul,"jobs=460,gpu_hours=3828,cpu_hours=9626,wait_avg=113min,fail_rate=0.138",Jul usage statistics for Engineering department,2026-06-30,slurmdbd,2026-06-30,AUTO
+JobHistory,user089,Month_May,"jobs=270,gpu_hours=1803,cpu_hours=4516,wait_avg=86min,fail_rate=0.087",May usage statistics for CS department,2026-06-30,slurmdbd,2026-06-30,AUTO
+JobHistory,user090,Month_Mar,"jobs=312,gpu_hours=7684,cpu_hours=13578,wait_avg=102min,fail_rate=0.038",Mar usage statistics for EarthSci department,2026-06-30,slurmdbd,2026-06-30,AUTO
+JobHistory,user091,Month_Jan,"jobs=122,gpu_hours=4132,cpu_hours=11474,wait_avg=84min,fail_rate=0.079",Jan usage statistics for Engineering department,2026-06-30,slurmdbd,2026-06-30,AUTO
+JobHistory,user091,Month_Nov,"jobs=423,gpu_hours=6169,cpu_hours=12067,wait_avg=10min,fail_rate=0.047",Nov usage statistics for Engineering department,2026-06-30,slurmdbd,2026-06-30,AUTO
+JobHistory,user092,Month_Aug,"jobs=279,gpu_hours=1586,cpu_hours=7807,wait_avg=105min,fail_rate=0.127",Aug usage statistics for Chemistry department,2026-06-30,slurmdbd,2026-06-30,AUTO
+JobHistory,user093,Month_Jun,"jobs=283,gpu_hours=6939,cpu_hours=18815,wait_avg=61min,fail_rate=0.092",Jun usage statistics for Biology department,2026-06-30,slurmdbd,2026-06-30,AUTO
+JobHistory,user094,Month_Apr,"jobs=268,gpu_hours=7727,cpu_hours=8891,wait_avg=34min,fail_rate=0.139",Apr usage statistics for CS department,2026-06-30,slurmdbd,2026-06-30,AUTO
+JobHistory,user095,Month_Feb,"jobs=304,gpu_hours=4256,cpu_hours=5285,wait_avg=114min,fail_rate=0.052",Feb usage statistics for Biology department,2026-06-30,slurmdbd,2026-06-30,AUTO
+JobHistory,user095,Month_Dec,"jobs=482,gpu_hours=9991,cpu_hours=19918,wait_avg=19min,fail_rate=0.064",Dec usage statistics for Biology department,2026-06-30,slurmdbd,2026-06-30,AUTO
+JobHistory,user096,Month_Sep,"jobs=208,gpu_hours=7131,cpu_hours=6175,wait_avg=98min,fail_rate=0.136",Sep usage statistics for MedRes department,2026-06-30,slurmdbd,2026-06-30,AUTO
+JobHistory,user097,Month_Jul,"jobs=45,gpu_hours=3649,cpu_hours=10777,wait_avg=74min,fail_rate=0.026",Jul usage statistics for Physics department,2026-06-30,slurmdbd,2026-06-30,AUTO
+JobHistory,user098,Month_May,"jobs=426,gpu_hours=3669,cpu_hours=8109,wait_avg=41min,fail_rate=0.028",May usage statistics for EarthSci department,2026-06-30,slurmdbd,2026-06-30,AUTO
+JobHistory,user099,Month_Mar,"jobs=301,gpu_hours=7757,cpu_hours=4643,wait_avg=13min,fail_rate=0.12",Mar usage statistics for Math department,2026-06-30,slurmdbd,2026-06-30,AUTO
+JobHistory,user100,Month_Jan,"jobs=166,gpu_hours=3438,cpu_hours=6934,wait_avg=36min,fail_rate=0.136",Jan usage statistics for Math department,2026-06-30,slurmdbd,2026-06-30,AUTO
+JobHistory,user100,Month_Oct,"jobs=481,gpu_hours=1920,cpu_hours=16011,wait_avg=47min,fail_rate=0.113",Oct usage statistics for Math department,2026-06-30,slurmdbd,2026-06-30,AUTO
+JobHistory,user101,Month_Aug,"jobs=442,gpu_hours=691,cpu_hours=4304,wait_avg=25min,fail_rate=0.116",Aug usage statistics for Engineering department,2026-06-30,slurmdbd,2026-06-30,AUTO
+JobHistory,user102,Month_Jun,"jobs=368,gpu_hours=609,cpu_hours=19047,wait_avg=70min,fail_rate=0.077",Jun usage statistics for MedRes department,2026-06-30,slurmdbd,2026-06-30,AUTO
+JobHistory,user103,Month_Apr,"jobs=286,gpu_hours=1015,cpu_hours=7513,wait_avg=93min,fail_rate=0.055",Apr usage statistics for Biology department,2026-06-30,slurmdbd,2026-06-30,AUTO
+JobHistory,user104,Month_Feb,"jobs=287,gpu_hours=3653,cpu_hours=12841,wait_avg=49min,fail_rate=0.021",Feb usage statistics for MedRes department,2026-06-30,slurmdbd,2026-06-30,AUTO
+JobHistory,user104,Month_Nov,"jobs=95,gpu_hours=7564,cpu_hours=10134,wait_avg=35min,fail_rate=0.068",Nov usage statistics for MedRes department,2026-06-30,slurmdbd,2026-06-30,AUTO
+JobHistory,user105,Month_Sep,"jobs=302,gpu_hours=9781,cpu_hours=15806,wait_avg=102min,fail_rate=0.141",Sep usage statistics for Math department,2026-06-30,slurmdbd,2026-06-30,AUTO
+JobHistory,user106,Month_Jul,"jobs=375,gpu_hours=2503,cpu_hours=19569,wait_avg=63min,fail_rate=0.127",Jul usage statistics for EarthSci department,2026-06-30,slurmdbd,2026-06-30,AUTO
+JobHistory,user107,Month_May,"jobs=195,gpu_hours=3253,cpu_hours=13890,wait_avg=9min,fail_rate=0.116",May usage statistics for Engineering department,2026-06-30,slurmdbd,2026-06-30,AUTO
+JobHistory,user108,Month_Mar,"jobs=19,gpu_hours=1264,cpu_hours=12273,wait_avg=32min,fail_rate=0.012",Mar usage statistics for Math department,2026-06-30,slurmdbd,2026-06-30,AUTO
+JobHistory,user108,Month_Dec,"jobs=86,gpu_hours=9912,cpu_hours=4511,wait_avg=30min,fail_rate=0.101",Dec usage statistics for Math department,2026-06-30,slurmdbd,2026-06-30,AUTO
+JobHistory,user109,Month_Oct,"jobs=463,gpu_hours=697,cpu_hours=5761,wait_avg=36min,fail_rate=0.01",Oct usage statistics for EarthSci department,2026-06-30,slurmdbd,2026-06-30,AUTO
+JobHistory,user110,Month_Aug,"jobs=487,gpu_hours=9910,cpu_hours=6699,wait_avg=18min,fail_rate=0.032",Aug usage statistics for Engineering department,2026-06-30,slurmdbd,2026-06-30,AUTO
+JobHistory,user111,Month_Jun,"jobs=479,gpu_hours=5599,cpu_hours=10561,wait_avg=104min,fail_rate=0.077",Jun usage statistics for MedRes department,2026-06-30,slurmdbd,2026-06-30,AUTO
+JobHistory,user112,Month_Apr,"jobs=103,gpu_hours=1573,cpu_hours=18653,wait_avg=53min,fail_rate=0.05",Apr usage statistics for MedRes department,2026-06-30,slurmdbd,2026-06-30,AUTO
+JobHistory,user113,Month_Jan,"jobs=434,gpu_hours=5567,cpu_hours=13797,wait_avg=75min,fail_rate=0.134",Jan usage statistics for EarthSci department,2026-06-30,slurmdbd,2026-06-30,AUTO
+JobHistory,user113,Month_Nov,"jobs=234,gpu_hours=3447,cpu_hours=19822,wait_avg=90min,fail_rate=0.145",Nov usage statistics for EarthSci department,2026-06-30,slurmdbd,2026-06-30,AUTO
+JobHistory,user114,Month_Sep,"jobs=465,gpu_hours=6019,cpu_hours=19209,wait_avg=18min,fail_rate=0.026",Sep usage statistics for Biology department,2026-06-30,slurmdbd,2026-06-30,AUTO
+JobHistory,user115,Month_Jul,"jobs=475,gpu_hours=4707,cpu_hours=9562,wait_avg=52min,fail_rate=0.011",Jul usage statistics for Biology department,2026-06-30,slurmdbd,2026-06-30,AUTO
+JobHistory,user116,Month_May,"jobs=307,gpu_hours=6696,cpu_hours=2607,wait_avg=110min,fail_rate=0.089",May usage statistics for MedRes department,2026-06-30,slurmdbd,2026-06-30,AUTO
+JobHistory,user117,Month_Feb,"jobs=405,gpu_hours=4091,cpu_hours=1353,wait_avg=7min,fail_rate=0.077",Feb usage statistics for Biology department,2026-06-30,slurmdbd,2026-06-30,AUTO
+JobHistory,user117,Month_Dec,"jobs=318,gpu_hours=3069,cpu_hours=13690,wait_avg=82min,fail_rate=0.089",Dec usage statistics for Biology department,2026-06-30,slurmdbd,2026-06-30,AUTO
+JobHistory,user118,Month_Oct,"jobs=97,gpu_hours=9301,cpu_hours=15501,wait_avg=21min,fail_rate=0.041",Oct usage statistics for Chemistry department,2026-06-30,slurmdbd,2026-06-30,AUTO
+JobHistory,user119,Month_Aug,"jobs=396,gpu_hours=6344,cpu_hours=9711,wait_avg=117min,fail_rate=0.071",Aug usage statistics for Chemistry department,2026-06-30,slurmdbd,2026-06-30,AUTO
+JobHistory,user120,Month_Jun,"jobs=327,gpu_hours=2907,cpu_hours=3808,wait_avg=30min,fail_rate=0.06",Jun usage statistics for Math department,2026-06-30,slurmdbd,2026-06-30,AUTO
+NodeHealth,hpc-gpu-001,Q4_FY2026,"uptime=97.57%,gpu_errors=1,temp_max=74C,power_avg=4819W,jobs=1584,drain_hours=33.6",Quarterly node health metrics,2026-06-30,health_check,2026-12-30,AUTO
+NodeHealth,hpc-gpu-004,Q1_FY2026,"uptime=98.02%,gpu_errors=19,temp_max=89C,power_avg=4030W,jobs=699,drain_hours=36.7",Quarterly node health metrics,2026-06-30,health_check,2026-03-30,AUTO
+NodeHealth,hpc-gpu-006,Q3_FY2026,"uptime=98.17%,gpu_errors=14,temp_max=80C,power_avg=3123W,jobs=355,drain_hours=22.0",Quarterly node health metrics,2026-06-30,health_check,2026-09-30,AUTO
+NodeHealth,hpc-gpu-009,Q1_FY2026,"uptime=98.48%,gpu_errors=19,temp_max=74C,power_avg=4588W,jobs=1815,drain_hours=37.7",Quarterly node health metrics,2026-06-30,health_check,2026-03-30,AUTO
+NodeHealth,hpc-gpu-011,Q3_FY2026,"uptime=95.21%,gpu_errors=13,temp_max=75C,power_avg=4500W,jobs=466,drain_hours=46.6",Quarterly node health metrics,2026-06-30,health_check,2026-09-30,AUTO
+NodeHealth,hpc-gpu-014,Q1_FY2026,"uptime=96.56%,gpu_errors=16,temp_max=88C,power_avg=3583W,jobs=800,drain_hours=36.1",Quarterly node health metrics,2026-06-30,health_check,2026-03-30,AUTO
+NodeHealth,hpc-gpu-016,Q2_FY2026,"uptime=98.85%,gpu_errors=19,temp_max=88C,power_avg=4703W,jobs=1046,drain_hours=43.1",Quarterly node health metrics,2026-06-30,health_check,2026-06-30,AUTO
+NodeHealth,hpc-gpu-018,Q4_FY2026,"uptime=96.68%,gpu_errors=14,temp_max=82C,power_avg=3878W,jobs=1911,drain_hours=34.9",Quarterly node health metrics,2026-06-30,health_check,2026-12-30,AUTO
+NodeHealth,hpc-gpu-021,Q2_FY2026,"uptime=96.62%,gpu_errors=13,temp_max=88C,power_avg=3448W,jobs=253,drain_hours=23.2",Quarterly node health metrics,2026-06-30,health_check,2026-06-30,AUTO
+NodeHealth,hpc-gpu-023,Q4_FY2026,"uptime=98.73%,gpu_errors=13,temp_max=86C,power_avg=4810W,jobs=508,drain_hours=29.2",Quarterly node health metrics,2026-06-30,health_check,2026-12-30,AUTO
+NodeHealth,hpc-gpu-026,Q2_FY2026,"uptime=99.89%,gpu_errors=17,temp_max=74C,power_avg=4817W,jobs=878,drain_hours=1.6",Quarterly node health metrics,2026-06-30,health_check,2026-06-30,AUTO
+NodeHealth,hpc-gpu-028,Q3_FY2026,"uptime=98.87%,gpu_errors=12,temp_max=83C,power_avg=4023W,jobs=1405,drain_hours=20.3",Quarterly node health metrics,2026-06-30,health_check,2026-09-30,AUTO
+NodeHealth,hpc-gpu-031,Q1_FY2026,"uptime=95.14%,gpu_errors=17,temp_max=73C,power_avg=4480W,jobs=1033,drain_hours=39.3",Quarterly node health metrics,2026-06-30,health_check,2026-03-30,AUTO
+NodeHealth,hpc-gpu-033,Q3_FY2026,"uptime=97.65%,gpu_errors=8,temp_max=85C,power_avg=3106W,jobs=1915,drain_hours=35.2",Quarterly node health metrics,2026-06-30,health_check,2026-09-30,AUTO
+NodeHealth,hpc-gpu-036,Q1_FY2026,"uptime=95.02%,gpu_errors=5,temp_max=80C,power_avg=5168W,jobs=624,drain_hours=30.5",Quarterly node health metrics,2026-06-30,health_check,2026-03-30,AUTO
+NodeHealth,hpc-gpu-038,Q3_FY2026,"uptime=96.6%,gpu_errors=1,temp_max=78C,power_avg=3554W,jobs=806,drain_hours=35.8",Quarterly node health metrics,2026-06-30,health_check,2026-09-30,AUTO
+NodeHealth,hpc-gpu-040,Q4_FY2026,"uptime=99.84%,gpu_errors=15,temp_max=88C,power_avg=4418W,jobs=555,drain_hours=40.9",Quarterly node health metrics,2026-06-30,health_check,2026-12-30,AUTO
+NodeHealth,hpc-gpu-043,Q2_FY2026,"uptime=99.54%,gpu_errors=8,temp_max=80C,power_avg=3487W,jobs=1977,drain_hours=46.2",Quarterly node health metrics,2026-06-30,health_check,2026-06-30,AUTO
+NodeHealth,hpc-gpu-045,Q4_FY2026,"uptime=98.81%,gpu_errors=5,temp_max=83C,power_avg=3432W,jobs=1537,drain_hours=19.2",Quarterly node health metrics,2026-06-30,health_check,2026-12-30,AUTO
+NodeHealth,hpc-gpu-048,Q2_FY2026,"uptime=96.55%,gpu_errors=19,temp_max=81C,power_avg=4080W,jobs=291,drain_hours=5.2",Quarterly node health metrics,2026-06-30,health_check,2026-06-30,AUTO
+NodeHealth,hpc-gpu-050,Q4_FY2026,"uptime=97.97%,gpu_errors=15,temp_max=83C,power_avg=3646W,jobs=888,drain_hours=31.4",Quarterly node health metrics,2026-06-30,health_check,2026-12-30,AUTO
+NodeHealth,hpc-gpu-053,Q1_FY2026,"uptime=96.31%,gpu_errors=12,temp_max=76C,power_avg=4627W,jobs=828,drain_hours=7.8",Quarterly node health metrics,2026-06-30,health_check,2026-03-30,AUTO
+NodeHealth,hpc-gpu-055,Q3_FY2026,"uptime=96.3%,gpu_errors=16,temp_max=84C,power_avg=4311W,jobs=1039,drain_hours=25.2",Quarterly node health metrics,2026-06-30,health_check,2026-09-30,AUTO
+NodeHealth,hpc-gpu-058,Q1_FY2026,"uptime=99.37%,gpu_errors=14,temp_max=82C,power_avg=3389W,jobs=1898,drain_hours=13.4",Quarterly node health metrics,2026-06-30,health_check,2026-03-30,AUTO
+NodeHealth,hpc-gpu-060,Q3_FY2026,"uptime=97.46%,gpu_errors=16,temp_max=85C,power_avg=3434W,jobs=1745,drain_hours=26.3",Quarterly node health metrics,2026-06-30,health_check,2026-09-30,AUTO
+NodeHealth,hpc-gpu-063,Q1_FY2026,"uptime=96.01%,gpu_errors=14,temp_max=81C,power_avg=3768W,jobs=1238,drain_hours=42.5",Quarterly node health metrics,2026-06-30,health_check,2026-03-30,AUTO
+NodeHealth,hpc-gpu-065,Q2_FY2026,"uptime=99.58%,gpu_errors=8,temp_max=81C,power_avg=3922W,jobs=308,drain_hours=41.6",Quarterly node health metrics,2026-06-30,health_check,2026-06-30,AUTO
+NodeHealth,hpc-gpu-067,Q4_FY2026,"uptime=97.93%,gpu_errors=1,temp_max=72C,power_avg=3740W,jobs=670,drain_hours=1.7",Quarterly node health metrics,2026-06-30,health_check,2026-12-30,AUTO
+NodeHealth,hpc-gpu-070,Q2_FY2026,"uptime=95.27%,gpu_errors=19,temp_max=84C,power_avg=4599W,jobs=897,drain_hours=43.0",Quarterly node health metrics,2026-06-30,health_check,2026-06-30,AUTO
+NodeHealth,hpc-gpu-072,Q4_FY2026,"uptime=98.95%,gpu_errors=7,temp_max=85C,power_avg=3725W,jobs=873,drain_hours=2.9",Quarterly node health metrics,2026-06-30,health_check,2026-12-30,AUTO
+NodeHealth,hpc-gpu-075,Q2_FY2026,"uptime=97.97%,gpu_errors=7,temp_max=76C,power_avg=3279W,jobs=1278,drain_hours=39.2",Quarterly node health metrics,2026-06-30,health_check,2026-06-30,AUTO
+NodeHealth,hpc-gpu-077,Q3_FY2026,"uptime=97.1%,gpu_errors=4,temp_max=84C,power_avg=3432W,jobs=809,drain_hours=31.6",Quarterly node health metrics,2026-06-30,health_check,2026-09-30,AUTO
+NodeHealth,hpc-gpu-080,Q1_FY2026,"uptime=99.9%,gpu_errors=13,temp_max=81C,power_avg=3629W,jobs=828,drain_hours=38.9",Quarterly node health metrics,2026-06-30,health_check,2026-03-30,AUTO
+NodeHealth,hpc-gpu-082,Q3_FY2026,"uptime=95.43%,gpu_errors=4,temp_max=81C,power_avg=3628W,jobs=449,drain_hours=47.6",Quarterly node health metrics,2026-06-30,health_check,2026-09-30,AUTO
+NodeHealth,hpc-gpu-085,Q1_FY2026,"uptime=96.78%,gpu_errors=0,temp_max=76C,power_avg=3158W,jobs=1628,drain_hours=5.5",Quarterly node health metrics,2026-06-30,health_check,2026-03-30,AUTO
+NodeHealth,hpc-gpu-087,Q3_FY2026,"uptime=98.49%,gpu_errors=9,temp_max=86C,power_avg=4204W,jobs=697,drain_hours=0.9",Quarterly node health metrics,2026-06-30,health_check,2026-09-30,AUTO
+NodeHealth,hpc-gpu-089,Q4_FY2026,"uptime=97.85%,gpu_errors=7,temp_max=83C,power_avg=3198W,jobs=249,drain_hours=11.2",Quarterly node health metrics,2026-06-30,health_check,2026-12-30,AUTO
+NodeHealth,hpc-gpu-092,Q2_FY2026,"uptime=95.07%,gpu_errors=5,temp_max=88C,power_avg=3472W,jobs=1496,drain_hours=1.5",Quarterly node health metrics,2026-06-30,health_check,2026-06-30,AUTO
+NodeHealth,hpc-gpu-094,Q4_FY2026,"uptime=99.66%,gpu_errors=5,temp_max=89C,power_avg=5138W,jobs=1225,drain_hours=6.5",Quarterly node health metrics,2026-06-30,health_check,2026-12-30,AUTO
+NodeHealth,hpc-cpu-001,Q2_FY2026,"uptime=98.81%,temp_max=66C,power_avg=906W,jobs=165,drain_hours=7.1",Quarterly node health metrics,2026-06-30,health_check,2026-06-30,AUTO
+NodeHealth,hpc-cpu-003,Q4_FY2026,"uptime=97.37%,temp_max=58C,power_avg=1073W,jobs=891,drain_hours=6.7",Quarterly node health metrics,2026-06-30,health_check,2026-12-30,AUTO
+NodeHealth,hpc-cpu-006,Q1_FY2026,"uptime=97.39%,temp_max=60C,power_avg=1046W,jobs=364,drain_hours=14.4",Quarterly node health metrics,2026-06-30,health_check,2026-03-30,AUTO
+NodeHealth,hpc-cpu-008,Q3_FY2026,"uptime=99.13%,temp_max=70C,power_avg=1134W,jobs=310,drain_hours=6.9",Quarterly node health metrics,2026-06-30,health_check,2026-09-30,AUTO
+NodeHealth,hpc-cpu-011,Q1_FY2026,"uptime=97.68%,temp_max=64C,power_avg=991W,jobs=474,drain_hours=3.7",Quarterly node health metrics,2026-06-30,health_check,2026-03-30,AUTO
+NodeHealth,hpc-cpu-013,Q3_FY2026,"uptime=97.91%,temp_max=58C,power_avg=1095W,jobs=134,drain_hours=11.2",Quarterly node health metrics,2026-06-30,health_check,2026-09-30,AUTO
+NodeHealth,hpc-cpu-016,Q1_FY2026,"uptime=97.73%,temp_max=67C,power_avg=874W,jobs=199,drain_hours=12.4",Quarterly node health metrics,2026-06-30,health_check,2026-03-30,AUTO
+NodeHealth,hpc-cpu-018,Q2_FY2026,"uptime=98.73%,temp_max=59C,power_avg=1018W,jobs=314,drain_hours=11.4",Quarterly node health metrics,2026-06-30,health_check,2026-06-30,AUTO
+NodeHealth,hpc-cpu-020,Q4_FY2026,"uptime=98.77%,temp_max=66C,power_avg=1173W,jobs=152,drain_hours=8.3",Quarterly node health metrics,2026-06-30,health_check,2026-12-30,AUTO
+NodeHealth,hpc-cpu-023,Q2_FY2026,"uptime=97.78%,temp_max=63C,power_avg=1121W,jobs=895,drain_hours=3.2",Quarterly node health metrics,2026-06-30,health_check,2026-06-30,AUTO
+NodeHealth,hpc-cpu-025,Q4_FY2026,"uptime=99.58%,temp_max=56C,power_avg=1199W,jobs=555,drain_hours=10.8",Quarterly node health metrics,2026-06-30,health_check,2026-12-30,AUTO
+NodeHealth,hpc-cpu-028,Q2_FY2026,"uptime=99.25%,temp_max=72C,power_avg=925W,jobs=109,drain_hours=14.4",Quarterly node health metrics,2026-06-30,health_check,2026-06-30,AUTO
+SacctRecord,5096705,JobRecord,"user=user097,account=EarthSci,partition=preemptible,nodes=1,gpus=4,submit=2026-06-03T00:00,wait=95min,runtime=243590s,state=COMPLETED,exitcode=0,maxrss=268G,energy=1461kWh",Job 5096705 sacct record,2026-06-03,slurmdbd,2026-06-03,AUTO
+SacctRecord,7803414,JobRecord,"user=user004,account=CS,partition=large,nodes=1,gpus=4,submit=2026-06-23T10:00,wait=133min,runtime=43105s,state=COMPLETED,exitcode=0,maxrss=81G,energy=258kWh",Job 7803414 sacct record,2026-06-23,slurmdbd,2026-06-23,AUTO
+SacctRecord,6494973,JobRecord,"user=user102,account=EarthSci,partition=priority,nodes=8,gpus=64,submit=2026-06-01T17:00,wait=59min,runtime=90476s,state=COMPLETED,exitcode=102,maxrss=198G,energy=8685kWh",Job 6494973 sacct record,2026-06-01,slurmdbd,2026-06-01,AUTO
+SacctRecord,3795891,JobRecord,"user=user022,account=Engineering,partition=preemptible,nodes=2,gpus=16,submit=2026-06-15T12:00,wait=105min,runtime=34077s,state=COMPLETED,exitcode=0,maxrss=204G,energy=817kWh",Job 3795891 sacct record,2026-06-15,slurmdbd,2026-06-15,AUTO
+SacctRecord,6368220,JobRecord,"user=user098,account=Chemistry,partition=priority,nodes=1,gpus=8,submit=2026-06-03T18:00,wait=142min,runtime=25897s,state=COMPLETED,exitcode=73,maxrss=11G,energy=310kWh",Job 6368220 sacct record,2026-06-03,slurmdbd,2026-06-03,AUTO
+SacctRecord,4972882,JobRecord,"user=user058,account=Engineering,partition=large,nodes=8,gpus=64,submit=2026-06-09T22:00,wait=9min,runtime=41078s,state=COMPLETED,exitcode=0,maxrss=704G,energy=3943kWh",Job 4972882 sacct record,2026-06-09,slurmdbd,2026-06-09,AUTO
+SacctRecord,2555059,JobRecord,"user=user071,account=Physics,partition=large,nodes=8,gpus=64,submit=2026-06-15T04:00,wait=157min,runtime=187158s,state=COMPLETED,exitcode=0,maxrss=710G,energy=17967kWh",Job 2555059 sacct record,2026-06-15,slurmdbd,2026-06-15,AUTO
+SacctRecord,6314036,JobRecord,"user=user116,account=EarthSci,partition=gpu,nodes=1,gpus=8,submit=2026-06-13T06:00,wait=78min,runtime=182504s,state=COMPLETED,exitcode=0,maxrss=892G,energy=2190kWh",Job 6314036 sacct record,2026-06-13,slurmdbd,2026-06-13,AUTO
+SacctRecord,5924778,JobRecord,"user=user037,account=Physics,partition=priority,nodes=1,gpus=1,submit=2026-06-15T02:00,wait=8min,runtime=111144s,state=COMPLETED,exitcode=89,maxrss=610G,energy=166kWh",Job 5924778 sacct record,2026-06-15,slurmdbd,2026-06-15,AUTO
+SacctRecord,9537713,JobRecord,"user=user113,account=Physics,partition=large,nodes=2,gpus=16,submit=2026-06-29T10:00,wait=57min,runtime=109477s,state=COMPLETED,exitcode=0,maxrss=47G,energy=2627kWh",Job 9537713 sacct record,2026-06-29,slurmdbd,2026-06-29,AUTO
+SacctRecord,5376253,JobRecord,"user=user071,account=EarthSci,partition=priority,nodes=1,gpus=4,submit=2026-06-09T21:00,wait=39min,runtime=195806s,state=COMPLETED,exitcode=136,maxrss=710G,energy=1174kWh",Job 5376253 sacct record,2026-06-09,slurmdbd,2026-06-09,AUTO
+SacctRecord,4888062,JobRecord,"user=user065,account=Math,partition=priority,nodes=2,gpus=16,submit=2026-06-12T00:00,wait=28min,runtime=256333s,state=CANCELLED,exitcode=0,maxrss=807G,energy=6151kWh",Job 4888062 sacct record,2026-06-12,slurmdbd,2026-06-12,AUTO
+SacctRecord,1869176,JobRecord,"user=user056,account=CS,partition=large,nodes=1,gpus=2,submit=2026-06-02T16:00,wait=19min,runtime=238522s,state=COMPLETED,exitcode=0,maxrss=545G,energy=715kWh",Job 1869176 sacct record,2026-06-02,slurmdbd,2026-06-02,AUTO
+SacctRecord,1763913,JobRecord,"user=user118,account=Biology,partition=large,nodes=1,gpus=1,submit=2026-06-09T19:00,wait=30min,runtime=10656s,state=COMPLETED,exitcode=135,maxrss=794G,energy=15kWh",Job 1763913 sacct record,2026-06-09,slurmdbd,2026-06-09,AUTO
+SacctRecord,7156618,JobRecord,"user=user065,account=Biology,partition=preemptible,nodes=1,gpus=4,submit=2026-06-10T21:00,wait=152min,runtime=158730s,state=COMPLETED,exitcode=0,maxrss=897G,energy=952kWh",Job 7156618 sacct record,2026-06-10,slurmdbd,2026-06-10,AUTO
+SacctRecord,2212512,JobRecord,"user=user075,account=Biology,partition=large,nodes=1,gpus=8,submit=2026-06-01T04:00,wait=164min,runtime=37461s,state=COMPLETED,exitcode=0,maxrss=351G,energy=449kWh",Job 2212512 sacct record,2026-06-01,slurmdbd,2026-06-01,AUTO
+SacctRecord,6789063,JobRecord,"user=user105,account=Math,partition=gpu,nodes=1,gpus=4,submit=2026-06-14T07:00,wait=60min,runtime=151326s,state=COMPLETED,exitcode=0,maxrss=280G,energy=907kWh",Job 6789063 sacct record,2026-06-14,slurmdbd,2026-06-14,AUTO
+SacctRecord,3902008,JobRecord,"user=user069,account=Math,partition=gpu,nodes=1,gpus=2,submit=2026-06-26T17:00,wait=135min,runtime=55618s,state=COMPLETED,exitcode=0,maxrss=868G,energy=166kWh",Job 3902008 sacct record,2026-06-26,slurmdbd,2026-06-26,AUTO
+SacctRecord,1164253,JobRecord,"user=user091,account=MedRes,partition=preemptible,nodes=1,gpus=1,submit=2026-06-18T02:00,wait=12min,runtime=116537s,state=COMPLETED,exitcode=0,maxrss=462G,energy=174kWh",Job 1164253 sacct record,2026-06-18,slurmdbd,2026-06-18,AUTO
+SacctRecord,5889807,JobRecord,"user=user008,account=Physics,partition=preemptible,nodes=4,gpus=32,submit=2026-06-21T18:00,wait=140min,runtime=208293s,state=FAILED,exitcode=0,maxrss=886G,energy=9998kWh",Job 5889807 sacct record,2026-06-21,slurmdbd,2026-06-21,AUTO
+SacctRecord,1374990,JobRecord,"user=user024,account=MedRes,partition=large,nodes=1,gpus=8,submit=2026-06-19T11:00,wait=8min,runtime=223654s,state=COMPLETED,exitcode=0,maxrss=150G,energy=2683kWh",Job 1374990 sacct record,2026-06-19,slurmdbd,2026-06-19,AUTO
+SacctRecord,8901846,JobRecord,"user=user074,account=Math,partition=gpu,nodes=1,gpus=4,submit=2026-06-05T21:00,wait=175min,runtime=111692s,state=COMPLETED,exitcode=99,maxrss=237G,energy=670kWh",Job 8901846 sacct record,2026-06-05,slurmdbd,2026-06-05,AUTO
+SacctRecord,2962256,JobRecord,"user=user041,account=Math,partition=gpu,nodes=1,gpus=1,submit=2026-06-09T20:00,wait=145min,runtime=97133s,state=COMPLETED,exitcode=0,maxrss=289G,energy=145kWh",Job 2962256 sacct record,2026-06-09,slurmdbd,2026-06-09,AUTO
+SacctRecord,7231037,JobRecord,"user=user042,account=CS,partition=gpu,nodes=1,gpus=1,submit=2026-06-28T07:00,wait=163min,runtime=147184s,state=FAILED,exitcode=0,maxrss=659G,energy=220kWh",Job 7231037 sacct record,2026-06-28,slurmdbd,2026-06-28,AUTO
+SacctRecord,3656898,JobRecord,"user=user057,account=Math,partition=large,nodes=4,gpus=32,submit=2026-06-23T11:00,wait=132min,runtime=117186s,state=COMPLETED,exitcode=82,maxrss=354G,energy=5624kWh",Job 3656898 sacct record,2026-06-23,slurmdbd,2026-06-23,AUTO
+SacctRecord,6296662,JobRecord,"user=user088,account=CS,partition=preemptible,nodes=8,gpus=64,submit=2026-06-03T06:00,wait=132min,runtime=244135s,state=COMPLETED,exitcode=0,maxrss=690G,energy=23436kWh",Job 6296662 sacct record,2026-06-03,slurmdbd,2026-06-03,AUTO
+SacctRecord,8463303,JobRecord,"user=user048,account=Physics,partition=gpu,nodes=1,gpus=1,submit=2026-06-23T11:00,wait=164min,runtime=98666s,state=COMPLETED,exitcode=0,maxrss=499G,energy=147kWh",Job 8463303 sacct record,2026-06-23,slurmdbd,2026-06-23,AUTO
+SacctRecord,5820932,JobRecord,"user=user059,account=CS,partition=large,nodes=1,gpus=8,submit=2026-06-19T11:00,wait=40min,runtime=195851s,state=COMPLETED,exitcode=0,maxrss=397G,energy=2350kWh",Job 5820932 sacct record,2026-06-19,slurmdbd,2026-06-19,AUTO
+SacctRecord,7282427,JobRecord,"user=user101,account=Chemistry,partition=preemptible,nodes=8,gpus=64,submit=2026-06-09T16:00,wait=156min,runtime=200030s,state=FAILED,exitcode=0,maxrss=735G,energy=19202kWh",Job 7282427 sacct record,2026-06-09,slurmdbd,2026-06-09,AUTO
+SacctRecord,5213474,JobRecord,"user=user088,account=Chemistry,partition=priority,nodes=1,gpus=2,submit=2026-06-29T13:00,wait=11min,runtime=155811s,state=COMPLETED,exitcode=0,maxrss=851G,energy=467kWh",Job 5213474 sacct record,2026-06-29,slurmdbd,2026-06-29,AUTO
+SacctRecord,1376325,JobRecord,"user=user092,account=Math,partition=priority,nodes=4,gpus=32,submit=2026-06-29T17:00,wait=169min,runtime=210058s,state=COMPLETED,exitcode=0,maxrss=893G,energy=10082kWh",Job 1376325 sacct record,2026-06-29,slurmdbd,2026-06-29,AUTO
+SacctRecord,8614143,JobRecord,"user=user090,account=Math,partition=gpu,nodes=1,gpus=2,submit=2026-06-10T19:00,wait=153min,runtime=15484s,state=COMPLETED,exitcode=0,maxrss=144G,energy=46kWh",Job 8614143 sacct record,2026-06-10,slurmdbd,2026-06-10,AUTO
+SacctRecord,1970911,JobRecord,"user=user099,account=CS,partition=priority,nodes=2,gpus=16,submit=2026-06-10T00:00,wait=47min,runtime=218240s,state=OOM,exitcode=0,maxrss=254G,energy=5237kWh",Job 1970911 sacct record,2026-06-10,slurmdbd,2026-06-10,AUTO
+SacctRecord,3454028,JobRecord,"user=user059,account=Chemistry,partition=priority,nodes=1,gpus=2,submit=2026-06-21T20:00,wait=177min,runtime=238541s,state=COMPLETED,exitcode=0,maxrss=24G,energy=715kWh",Job 3454028 sacct record,2026-06-21,slurmdbd,2026-06-21,AUTO
+SacctRecord,6401183,JobRecord,"user=user048,account=Chemistry,partition=gpu,nodes=1,gpus=8,submit=2026-06-18T13:00,wait=179min,runtime=216759s,state=FAILED,exitcode=0,maxrss=197G,energy=2601kWh",Job 6401183 sacct record,2026-06-18,slurmdbd,2026-06-18,AUTO
+SacctRecord,5956105,JobRecord,"user=user093,account=Math,partition=large,nodes=1,gpus=8,submit=2026-06-23T20:00,wait=23min,runtime=256853s,state=COMPLETED,exitcode=0,maxrss=201G,energy=3082kWh",Job 5956105 sacct record,2026-06-23,slurmdbd,2026-06-23,AUTO
+SacctRecord,1703624,JobRecord,"user=user029,account=CS,partition=preemptible,nodes=4,gpus=32,submit=2026-06-23T09:00,wait=33min,runtime=124640s,state=COMPLETED,exitcode=39,maxrss=62G,energy=5982kWh",Job 1703624 sacct record,2026-06-23,slurmdbd,2026-06-23,AUTO
+SacctRecord,6602831,JobRecord,"user=user083,account=Math,partition=priority,nodes=1,gpus=1,submit=2026-06-27T19:00,wait=147min,runtime=231917s,state=COMPLETED,exitcode=2,maxrss=427G,energy=347kWh",Job 6602831 sacct record,2026-06-27,slurmdbd,2026-06-27,AUTO
+SacctRecord,2894999,JobRecord,"user=user044,account=Math,partition=priority,nodes=8,gpus=64,submit=2026-06-16T02:00,wait=38min,runtime=209279s,state=COMPLETED,exitcode=0,maxrss=786G,energy=20090kWh",Job 2894999 sacct record,2026-06-16,slurmdbd,2026-06-16,AUTO
+SacctRecord,3790511,JobRecord,"user=user085,account=MedRes,partition=gpu,nodes=1,gpus=4,submit=2026-06-29T20:00,wait=105min,runtime=77233s,state=COMPLETED,exitcode=32,maxrss=349G,energy=463kWh",Job 3790511 sacct record,2026-06-29,slurmdbd,2026-06-29,AUTO
+SacctRecord,3680120,JobRecord,"user=user039,account=Biology,partition=preemptible,nodes=1,gpus=4,submit=2026-06-12T10:00,wait=177min,runtime=1621s,state=COMPLETED,exitcode=25,maxrss=554G,energy=9kWh",Job 3680120 sacct record,2026-06-12,slurmdbd,2026-06-12,AUTO
+SacctRecord,7477796,JobRecord,"user=user108,account=Biology,partition=gpu,nodes=1,gpus=2,submit=2026-06-26T11:00,wait=156min,runtime=258480s,state=COMPLETED,exitcode=0,maxrss=448G,energy=775kWh",Job 7477796 sacct record,2026-06-26,slurmdbd,2026-06-26,AUTO
+SacctRecord,8050236,JobRecord,"user=user067,account=MedRes,partition=priority,nodes=4,gpus=32,submit=2026-06-03T10:00,wait=23min,runtime=177180s,state=COMPLETED,exitcode=0,maxrss=423G,energy=8504kWh",Job 8050236 sacct record,2026-06-03,slurmdbd,2026-06-03,AUTO
+SacctRecord,2896460,JobRecord,"user=user006,account=Physics,partition=gpu,nodes=1,gpus=1,submit=2026-06-05T04:00,wait=92min,runtime=28623s,state=COMPLETED,exitcode=0,maxrss=187G,energy=42kWh",Job 2896460 sacct record,2026-06-05,slurmdbd,2026-06-05,AUTO
+SacctRecord,3238514,JobRecord,"user=user086,account=Biology,partition=large,nodes=8,gpus=64,submit=2026-06-06T14:00,wait=44min,runtime=200673s,state=COMPLETED,exitcode=0,maxrss=124G,energy=19264kWh",Job 3238514 sacct record,2026-06-06,slurmdbd,2026-06-06,AUTO
+SacctRecord,9719250,JobRecord,"user=user102,account=Chemistry,partition=gpu,nodes=8,gpus=64,submit=2026-06-14T17:00,wait=138min,runtime=13456s,state=COMPLETED,exitcode=0,maxrss=758G,energy=1291kWh",Job 9719250 sacct record,2026-06-14,slurmdbd,2026-06-14,AUTO
+SacctRecord,5837924,JobRecord,"user=user051,account=MedRes,partition=preemptible,nodes=4,gpus=32,submit=2026-06-11T09:00,wait=171min,runtime=181877s,state=COMPLETED,exitcode=0,maxrss=222G,energy=8730kWh",Job 5837924 sacct record,2026-06-11,slurmdbd,2026-06-11,AUTO
+SacctRecord,7581694,JobRecord,"user=user025,account=MedRes,partition=gpu,nodes=1,gpus=8,submit=2026-06-30T23:00,wait=171min,runtime=167171s,state=TIMEOUT,exitcode=0,maxrss=656G,energy=2006kWh",Job 7581694 sacct record,2026-06-30,slurmdbd,2026-06-30,AUTO
+SacctRecord,8760771,JobRecord,"user=user075,account=MedRes,partition=priority,nodes=4,gpus=32,submit=2026-06-22T20:00,wait=86min,runtime=132495s,state=COMPLETED,exitcode=0,maxrss=157G,energy=6359kWh",Job 8760771 sacct record,2026-06-22,slurmdbd,2026-06-22,AUTO
+SacctRecord,8715569,JobRecord,"user=user026,account=CS,partition=large,nodes=8,gpus=64,submit=2026-06-03T06:00,wait=136min,runtime=1730s,state=COMPLETED,exitcode=0,maxrss=347G,energy=166kWh",Job 8715569 sacct record,2026-06-03,slurmdbd,2026-06-03,AUTO
+SacctRecord,7764172,JobRecord,"user=user102,account=EarthSci,partition=gpu,nodes=8,gpus=64,submit=2026-06-12T01:00,wait=83min,runtime=222428s,state=CANCELLED,exitcode=0,maxrss=546G,energy=21353kWh",Job 7764172 sacct record,2026-06-12,slurmdbd,2026-06-12,AUTO
+SacctRecord,5096705,JobRecord,"user=user097,account=EarthSci,partition=preemptible,nodes=1,gpus=4,submit=2026-06-03T00:00,wait=95min,runtime=243590s,state=COMPLETED,exitcode=0,maxrss=268G,energy=1461kWh",Job 5096705 sacct record,2026-06-03,slurmdbd,2026-06-03,AUTO
+SacctRecord,7803414,JobRecord,"user=user004,account=CS,partition=large,nodes=1,gpus=4,submit=2026-06-23T10:00,wait=133min,runtime=43105s,state=COMPLETED,exitcode=0,maxrss=81G,energy=258kWh",Job 7803414 sacct record,2026-06-23,slurmdbd,2026-06-23,AUTO
+SacctRecord,6494973,JobRecord,"user=user102,account=EarthSci,partition=priority,nodes=8,gpus=64,submit=2026-06-01T17:00,wait=59min,runtime=90476s,state=COMPLETED,exitcode=102,maxrss=198G,energy=8685kWh",Job 6494973 sacct record,2026-06-01,slurmdbd,2026-06-01,AUTO
+SacctRecord,3795891,JobRecord,"user=user022,account=Engineering,partition=preemptible,nodes=2,gpus=16,submit=2026-06-15T12:00,wait=105min,runtime=34077s,state=COMPLETED,exitcode=0,maxrss=204G,energy=817kWh",Job 3795891 sacct record,2026-06-15,slurmdbd,2026-06-15,AUTO
+SacctRecord,6368220,JobRecord,"user=user098,account=Chemistry,partition=priority,nodes=1,gpus=8,submit=2026-06-03T18:00,wait=142min,runtime=25897s,state=COMPLETED,exitcode=73,maxrss=11G,energy=310kWh",Job 6368220 sacct record,2026-06-03,slurmdbd,2026-06-03,AUTO
+SacctRecord,4972882,JobRecord,"user=user058,account=Engineering,partition=large,nodes=8,gpus=64,submit=2026-06-09T22:00,wait=9min,runtime=41078s,state=COMPLETED,exitcode=0,maxrss=704G,energy=3943kWh",Job 4972882 sacct record,2026-06-09,slurmdbd,2026-06-09,AUTO
+SacctRecord,2555059,JobRecord,"user=user071,account=Physics,partition=large,nodes=8,gpus=64,submit=2026-06-15T04:00,wait=157min,runtime=187158s,state=COMPLETED,exitcode=0,maxrss=710G,energy=17967kWh",Job 2555059 sacct record,2026-06-15,slurmdbd,2026-06-15,AUTO
+SacctRecord,6314036,JobRecord,"user=user116,account=EarthSci,partition=gpu,nodes=1,gpus=8,submit=2026-06-13T06:00,wait=78min,runtime=182504s,state=COMPLETED,exitcode=0,maxrss=892G,energy=2190kWh",Job 6314036 sacct record,2026-06-13,slurmdbd,2026-06-13,AUTO
+SacctRecord,5924778,JobRecord,"user=user037,account=Physics,partition=priority,nodes=1,gpus=1,submit=2026-06-15T02:00,wait=8min,runtime=111144s,state=COMPLETED,exitcode=89,maxrss=610G,energy=166kWh",Job 5924778 sacct record,2026-06-15,slurmdbd,2026-06-15,AUTO
+SacctRecord,9537713,JobRecord,"user=user113,account=Physics,partition=large,nodes=2,gpus=16,submit=2026-06-29T10:00,wait=57min,runtime=109477s,state=COMPLETED,exitcode=0,maxrss=47G,energy=2627kWh",Job 9537713 sacct record,2026-06-29,slurmdbd,2026-06-29,AUTO
+SacctRecord,5376253,JobRecord,"user=user071,account=EarthSci,partition=priority,nodes=1,gpus=4,submit=2026-06-09T21:00,wait=39min,runtime=195806s,state=COMPLETED,exitcode=136,maxrss=710G,energy=1174kWh",Job 5376253 sacct record,2026-06-09,slurmdbd,2026-06-09,AUTO
+SacctRecord,4888062,JobRecord,"user=user065,account=Math,partition=priority,nodes=2,gpus=16,submit=2026-06-12T00:00,wait=28min,runtime=256333s,state=CANCELLED,exitcode=0,maxrss=807G,energy=6151kWh",Job 4888062 sacct record,2026-06-12,slurmdbd,2026-06-12,AUTO
+SacctRecord,1869176,JobRecord,"user=user056,account=CS,partition=large,nodes=1,gpus=2,submit=2026-06-02T16:00,wait=19min,runtime=238522s,state=COMPLETED,exitcode=0,maxrss=545G,energy=715kWh",Job 1869176 sacct record,2026-06-02,slurmdbd,2026-06-02,AUTO
+SacctRecord,1763913,JobRecord,"user=user118,account=Biology,partition=large,nodes=1,gpus=1,submit=2026-06-09T19:00,wait=30min,runtime=10656s,state=COMPLETED,exitcode=135,maxrss=794G,energy=15kWh",Job 1763913 sacct record,2026-06-09,slurmdbd,2026-06-09,AUTO
+SacctRecord,7156618,JobRecord,"user=user065,account=Biology,partition=preemptible,nodes=1,gpus=4,submit=2026-06-10T21:00,wait=152min,runtime=158730s,state=COMPLETED,exitcode=0,maxrss=897G,energy=952kWh",Job 7156618 sacct record,2026-06-10,slurmdbd,2026-06-10,AUTO
+SacctRecord,2212512,JobRecord,"user=user075,account=Biology,partition=large,nodes=1,gpus=8,submit=2026-06-01T04:00,wait=164min,runtime=37461s,state=COMPLETED,exitcode=0,maxrss=351G,energy=449kWh",Job 2212512 sacct record,2026-06-01,slurmdbd,2026-06-01,AUTO
+SacctRecord,6789063,JobRecord,"user=user105,account=Math,partition=gpu,nodes=1,gpus=4,submit=2026-06-14T07:00,wait=60min,runtime=151326s,state=COMPLETED,exitcode=0,maxrss=280G,energy=907kWh",Job 6789063 sacct record,2026-06-14,slurmdbd,2026-06-14,AUTO
+SacctRecord,3902008,JobRecord,"user=user069,account=Math,partition=gpu,nodes=1,gpus=2,submit=2026-06-26T17:00,wait=135min,runtime=55618s,state=COMPLETED,exitcode=0,maxrss=868G,energy=166kWh",Job 3902008 sacct record,2026-06-26,slurmdbd,2026-06-26,AUTO
+SacctRecord,1164253,JobRecord,"user=user091,account=MedRes,partition=preemptible,nodes=1,gpus=1,submit=2026-06-18T02:00,wait=12min,runtime=116537s,state=COMPLETED,exitcode=0,maxrss=462G,energy=174kWh",Job 1164253 sacct record,2026-06-18,slurmdbd,2026-06-18,AUTO
+SacctRecord,5889807,JobRecord,"user=user008,account=Physics,partition=preemptible,nodes=4,gpus=32,submit=2026-06-21T18:00,wait=140min,runtime=208293s,state=FAILED,exitcode=0,maxrss=886G,energy=9998kWh",Job 5889807 sacct record,2026-06-21,slurmdbd,2026-06-21,AUTO
+SacctRecord,1374990,JobRecord,"user=user024,account=MedRes,partition=large,nodes=1,gpus=8,submit=2026-06-19T11:00,wait=8min,runtime=223654s,state=COMPLETED,exitcode=0,maxrss=150G,energy=2683kWh",Job 1374990 sacct record,2026-06-19,slurmdbd,2026-06-19,AUTO
+SacctRecord,8901846,JobRecord,"user=user074,account=Math,partition=gpu,nodes=1,gpus=4,submit=2026-06-05T21:00,wait=175min,runtime=111692s,state=COMPLETED,exitcode=99,maxrss=237G,energy=670kWh",Job 8901846 sacct record,2026-06-05,slurmdbd,2026-06-05,AUTO
+SacctRecord,2962256,JobRecord,"user=user041,account=Math,partition=gpu,nodes=1,gpus=1,submit=2026-06-09T20:00,wait=145min,runtime=97133s,state=COMPLETED,exitcode=0,maxrss=289G,energy=145kWh",Job 2962256 sacct record,2026-06-09,slurmdbd,2026-06-09,AUTO
+SacctRecord,7231037,JobRecord,"user=user042,account=CS,partition=gpu,nodes=1,gpus=1,submit=2026-06-28T07:00,wait=163min,runtime=147184s,state=FAILED,exitcode=0,maxrss=659G,energy=220kWh",Job 7231037 sacct record,2026-06-28,slurmdbd,2026-06-28,AUTO
+SacctRecord,3656898,JobRecord,"user=user057,account=Math,partition=large,nodes=4,gpus=32,submit=2026-06-23T11:00,wait=132min,runtime=117186s,state=COMPLETED,exitcode=82,maxrss=354G,energy=5624kWh",Job 3656898 sacct record,2026-06-23,slurmdbd,2026-06-23,AUTO
+SacctRecord,6296662,JobRecord,"user=user088,account=CS,partition=preemptible,nodes=8,gpus=64,submit=2026-06-03T06:00,wait=132min,runtime=244135s,state=COMPLETED,exitcode=0,maxrss=690G,energy=23436kWh",Job 6296662 sacct record,2026-06-03,slurmdbd,2026-06-03,AUTO
+SacctRecord,8463303,JobRecord,"user=user048,account=Physics,partition=gpu,nodes=1,gpus=1,submit=2026-06-23T11:00,wait=164min,runtime=98666s,state=COMPLETED,exitcode=0,maxrss=499G,energy=147kWh",Job 8463303 sacct record,2026-06-23,slurmdbd,2026-06-23,AUTO
+SacctRecord,5820932,JobRecord,"user=user059,account=CS,partition=large,nodes=1,gpus=8,submit=2026-06-19T11:00,wait=40min,runtime=195851s,state=COMPLETED,exitcode=0,maxrss=397G,energy=2350kWh",Job 5820932 sacct record,2026-06-19,slurmdbd,2026-06-19,AUTO
+SacctRecord,7282427,JobRecord,"user=user101,account=Chemistry,partition=preemptible,nodes=8,gpus=64,submit=2026-06-09T16:00,wait=156min,runtime=200030s,state=FAILED,exitcode=0,maxrss=735G,energy=19202kWh",Job 7282427 sacct record,2026-06-09,slurmdbd,2026-06-09,AUTO
+SacctRecord,5213474,JobRecord,"user=user088,account=Chemistry,partition=priority,nodes=1,gpus=2,submit=2026-06-29T13:00,wait=11min,runtime=155811s,state=COMPLETED,exitcode=0,maxrss=851G,energy=467kWh",Job 5213474 sacct record,2026-06-29,slurmdbd,2026-06-29,AUTO
+SacctRecord,1376325,JobRecord,"user=user092,account=Math,partition=priority,nodes=4,gpus=32,submit=2026-06-29T17:00,wait=169min,runtime=210058s,state=COMPLETED,exitcode=0,maxrss=893G,energy=10082kWh",Job 1376325 sacct record,2026-06-29,slurmdbd,2026-06-29,AUTO
+SacctRecord,8614143,JobRecord,"user=user090,account=Math,partition=gpu,nodes=1,gpus=2,submit=2026-06-10T19:00,wait=153min,runtime=15484s,state=COMPLETED,exitcode=0,maxrss=144G,energy=46kWh",Job 8614143 sacct record,2026-06-10,slurmdbd,2026-06-10,AUTO
+SacctRecord,1970911,JobRecord,"user=user099,account=CS,partition=priority,nodes=2,gpus=16,submit=2026-06-10T00:00,wait=47min,runtime=218240s,state=OOM,exitcode=0,maxrss=254G,energy=5237kWh",Job 1970911 sacct record,2026-06-10,slurmdbd,2026-06-10,AUTO
+SacctRecord,3454028,JobRecord,"user=user059,account=Chemistry,partition=priority,nodes=1,gpus=2,submit=2026-06-21T20:00,wait=177min,runtime=238541s,state=COMPLETED,exitcode=0,maxrss=24G,energy=715kWh",Job 3454028 sacct record,2026-06-21,slurmdbd,2026-06-21,AUTO
+SacctRecord,6401183,JobRecord,"user=user048,account=Chemistry,partition=gpu,nodes=1,gpus=8,submit=2026-06-18T13:00,wait=179min,runtime=216759s,state=FAILED,exitcode=0,maxrss=197G,energy=2601kWh",Job 6401183 sacct record,2026-06-18,slurmdbd,2026-06-18,AUTO
+SacctRecord,5956105,JobRecord,"user=user093,account=Math,partition=large,nodes=1,gpus=8,submit=2026-06-23T20:00,wait=23min,runtime=256853s,state=COMPLETED,exitcode=0,maxrss=201G,energy=3082kWh",Job 5956105 sacct record,2026-06-23,slurmdbd,2026-06-23,AUTO
+SacctRecord,1703624,JobRecord,"user=user029,account=CS,partition=preemptible,nodes=4,gpus=32,submit=2026-06-23T09:00,wait=33min,runtime=124640s,state=COMPLETED,exitcode=39,maxrss=62G,energy=5982kWh",Job 1703624 sacct record,2026-06-23,slurmdbd,2026-06-23,AUTO
+SacctRecord,6602831,JobRecord,"user=user083,account=Math,partition=priority,nodes=1,gpus=1,submit=2026-06-27T19:00,wait=147min,runtime=231917s,state=COMPLETED,exitcode=2,maxrss=427G,energy=347kWh",Job 6602831 sacct record,2026-06-27,slurmdbd,2026-06-27,AUTO
+SacctRecord,2894999,JobRecord,"user=user044,account=Math,partition=priority,nodes=8,gpus=64,submit=2026-06-16T02:00,wait=38min,runtime=209279s,state=COMPLETED,exitcode=0,maxrss=786G,energy=20090kWh",Job 2894999 sacct record,2026-06-16,slurmdbd,2026-06-16,AUTO
+SacctRecord,3790511,JobRecord,"user=user085,account=MedRes,partition=gpu,nodes=1,gpus=4,submit=2026-06-29T20:00,wait=105min,runtime=77233s,state=COMPLETED,exitcode=32,maxrss=349G,energy=463kWh",Job 3790511 sacct record,2026-06-29,slurmdbd,2026-06-29,AUTO
+SacctRecord,3680120,JobRecord,"user=user039,account=Biology,partition=preemptible,nodes=1,gpus=4,submit=2026-06-12T10:00,wait=177min,runtime=1621s,state=COMPLETED,exitcode=25,maxrss=554G,energy=9kWh",Job 3680120 sacct record,2026-06-12,slurmdbd,2026-06-12,AUTO
+SacctRecord,7477796,JobRecord,"user=user108,account=Biology,partition=gpu,nodes=1,gpus=2,submit=2026-06-26T11:00,wait=156min,runtime=258480s,state=COMPLETED,exitcode=0,maxrss=448G,energy=775kWh",Job 7477796 sacct record,2026-06-26,slurmdbd,2026-06-26,AUTO
+SacctRecord,8050236,JobRecord,"user=user067,account=MedRes,partition=priority,nodes=4,gpus=32,submit=2026-06-03T10:00,wait=23min,runtime=177180s,state=COMPLETED,exitcode=0,maxrss=423G,energy=8504kWh",Job 8050236 sacct record,2026-06-03,slurmdbd,2026-06-03,AUTO
+SacctRecord,2896460,JobRecord,"user=user006,account=Physics,partition=gpu,nodes=1,gpus=1,submit=2026-06-05T04:00,wait=92min,runtime=28623s,state=COMPLETED,exitcode=0,maxrss=187G,energy=42kWh",Job 2896460 sacct record,2026-06-05,slurmdbd,2026-06-05,AUTO
+SacctRecord,3238514,JobRecord,"user=user086,account=Biology,partition=large,nodes=8,gpus=64,submit=2026-06-06T14:00,wait=44min,runtime=200673s,state=COMPLETED,exitcode=0,maxrss=124G,energy=19264kWh",Job 3238514 sacct record,2026-06-06,slurmdbd,2026-06-06,AUTO
+SacctRecord,9719250,JobRecord,"user=user102,account=Chemistry,partition=gpu,nodes=8,gpus=64,submit=2026-06-14T17:00,wait=138min,runtime=13456s,state=COMPLETED,exitcode=0,maxrss=758G,energy=1291kWh",Job 9719250 sacct record,2026-06-14,slurmdbd,2026-06-14,AUTO
+SacctRecord,5837924,JobRecord,"user=user051,account=MedRes,partition=preemptible,nodes=4,gpus=32,submit=2026-06-11T09:00,wait=171min,runtime=181877s,state=COMPLETED,exitcode=0,maxrss=222G,energy=8730kWh",Job 5837924 sacct record,2026-06-11,slurmdbd,2026-06-11,AUTO
+SacctRecord,7581694,JobRecord,"user=user025,account=MedRes,partition=gpu,nodes=1,gpus=8,submit=2026-06-30T23:00,wait=171min,runtime=167171s,state=TIMEOUT,exitcode=0,maxrss=656G,energy=2006kWh",Job 7581694 sacct record,2026-06-30,slurmdbd,2026-06-30,AUTO
+SacctRecord,8760771,JobRecord,"user=user075,account=MedRes,partition=priority,nodes=4,gpus=32,submit=2026-06-22T20:00,wait=86min,runtime=132495s,state=COMPLETED,exitcode=0,maxrss=157G,energy=6359kWh",Job 8760771 sacct record,2026-06-22,slurmdbd,2026-06-22,AUTO
+SacctRecord,8715569,JobRecord,"user=user026,account=CS,partition=large,nodes=8,gpus=64,submit=2026-06-03T06:00,wait=136min,runtime=1730s,state=COMPLETED,exitcode=0,maxrss=347G,energy=166kWh",Job 8715569 sacct record,2026-06-03,slurmdbd,2026-06-03,AUTO
+SacctRecord,7764172,JobRecord,"user=user102,account=EarthSci,partition=gpu,nodes=8,gpus=64,submit=2026-06-12T01:00,wait=83min,runtime=222428s,state=CANCELLED,exitcode=0,maxrss=546G,energy=21353kWh",Job 7764172 sacct record,2026-06-12,slurmdbd,2026-06-12,AUTO
+Lustre_Configuration,stripe_count,4,Filesystem stripe count,,,,,
